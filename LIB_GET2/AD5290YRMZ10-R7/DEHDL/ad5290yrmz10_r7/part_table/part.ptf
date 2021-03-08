@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'AD5290YRMZ10_R7'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Analog Devices", "AD5290YRMZ10-R7" (!) = "", "SOP50P490X110-10N", "Small Outline Packages", "584-AD5290YRMZ10-R7", "https://www.mouser.co.uk/ProductDetail/Analog-Devices/AD5290YRMZ10-R7?qs=NmRFExCfTkERE1iuOsYtFg%3D%3D", "Digital Potentiometer ICs +/-15V 8-Bit DigiPOT", "", "1.1 mm"
+END_PART
+
+END.
