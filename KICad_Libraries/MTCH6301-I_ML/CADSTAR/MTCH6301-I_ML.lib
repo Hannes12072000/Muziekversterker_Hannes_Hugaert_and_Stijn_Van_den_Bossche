@@ -1,0 +1,16 @@
+.MTCH6301-I_ML :1 ;Capacitive Touch Sensors 32KB Flash 8KB RAM, 40 MHz
+QFN65P800X800X100-45N-D
+*STM IC
+*NGS
+*PLB 1="SDA" 2="TX17" 3="TX16" 4="TX15" 5="TX14" 6="VSS_1" 7="VCAP" 8="INT" 9="N/C" 10="RX12" 11="RX11" 12="TX13" 13="TX12" 14="RX10" 15="RX9" 16="VSS_2" 17="VDD_1" 18="'RESET'" 19="RX8" 20="RX7" 21="RX6" 22="RX5" 23="RX4" 24="RX3" 25="RX2" 26="RX1" 27="RX0" 28="VDD_2" 29="VSS_3" 30="TX3" 31="TX2" 32="TX1" 33="TX0" 34="TX4" 35="TX8" 36="TX7" 37="TX6" 38="TX5" 39="VSS_4" 40="VDD_3" 41="TX9" 42="TX10" 43="TX11" 44="SCL" 45="EP"
+*MXP 45
+*DFN MTCH6301-I_ML
+~!Mouser Part Number (579-MTCH6301-I/ML)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MTCH6301-I-ML?qs=VteoEApvSICWu1DtjlRtOA%3D%3D)
+~!Manufacturer_Name (Microchip)
+~!Manufacturer_Part_Number (MTCH6301-I/ML)
+~!Link Datasheet (http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en560085)
+~!Height (1mm)
+~!3D_Model (MTCH6301-I_ML)
+MTCH6301-I_ML
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 17.1!U 18.1!U 19.1!U 20.1!U 21.1!U 22.1!U 33.1!U 32.1!U 31.1!U 30.1!U 29.1!U 28.1!U 27.1!U 26.1!U 25.1!U 24.1!U 23.1!U 45.1!U 44.1!U 43.1!U 42.1!U 41.1!U 40.1!U 39.1!U 38.1!U 37.1!U 36.1!U 35.1!U 34.1!U 

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'MTCH6301_I_ML'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Microchip", "MTCH6301-I/ML" (!) = "", "QFN65P800X800X100-45N-D", "Quad Flat No-Lead", "579-MTCH6301-I/ML", "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MTCH6301-I-ML?qs=VteoEApvSICWu1DtjlRtOA%3D%3D", "Capacitive Touch Sensors 32KB Flash 8KB RAM, 40 MHz", "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en560085", "1 mm"
+END_PART
+
+END.

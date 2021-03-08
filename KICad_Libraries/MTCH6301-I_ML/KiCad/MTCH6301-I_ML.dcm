@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MTCH6301-I_ML
+D Capacitive Touch Sensors 32KB Flash 8KB RAM, 40 MHz
+K
+F http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en560085
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,9 @@
+Manufacturer=Microchip
+PartNumber=MTCH6301-I/ML
+PartCategory=Integrated Circuit
+PackageCategory=Quad Flat No-Lead
+PinCount=45
+Version=1.1
+Released=2021-02-17 09:02:20
+Downloaded=2021-02-17 09:51:19
+3D=Y

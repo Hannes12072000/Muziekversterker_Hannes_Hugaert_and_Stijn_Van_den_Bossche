@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "QFN65P800X800X100-45N-D"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "QFN65P800X800X100-45N-D")
+        (spec "default")
+    )
+)
