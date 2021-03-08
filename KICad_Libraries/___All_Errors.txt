@@ -1,0 +1,7 @@
+CorrelationId: b61a6a38-1ea4-4b4e-84a2-0f65191984fa
+UTC DateTime: 6-3-2020 13:42:59
+
+The following files/folders have not been downloaded
+1. Hartslagmeter_KiCad/xc888.l#1
+2. Hartslagmeter_KiCad/xc888.l#2
+3. Hartslagmeter_KiCad/xc888.l#3
