@@ -1,0 +1,16 @@
+.LTC3124EFE_PBF :1 ;Switching Voltage Regulators 15V, 5A 2-Phase Synchronous Step-Up DC/DC Converter with Output Disconnect
+SOP65P640X110-17N
+*STM IC
+*NGS
+*PLB 1="SWB" 2="PGNDB" 3="SWA" 4="PGNDA" 5="VIN" 6="PWM/SYNC" 7="VCC" 8="RT" 9="VC" 10="FB" 11="'SD'" 12="SGND" 13="VOUTA" 14="NC" 15="VOUTB" 16="CAP" 17="PGND"
+*MXP 17
+*DFN LTC3124EFE_PBF
+~!Mouser Part Number (-)
+~!Mouser Price/Stock (-)
+~!Manufacturer_Name (Analog Devices)
+~!Manufacturer_Part_Number (LTC3124EFE#PBF)
+~!Link Datasheet (https://www.arrow.com/en/products/ltc3124efepbf/analog-devices)
+~!Height (1.1mm)
+~!3D_Model (LTC3124EFE#PBF)
+LTC3124EFE_PBF
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 10.1!U 9.1!U 

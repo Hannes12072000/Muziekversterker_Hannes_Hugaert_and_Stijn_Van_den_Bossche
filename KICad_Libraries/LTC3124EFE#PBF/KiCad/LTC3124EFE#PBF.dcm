@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LTC3124EFE#PBF
+D Switching Voltage Regulators 15V, 5A 2-Phase Synchronous Step-Up DC/DC Converter with Output Disconnect
+K
+F https://www.arrow.com/en/products/ltc3124efepbf/analog-devices
+$ENDCMP
+#
+#End Doc Library

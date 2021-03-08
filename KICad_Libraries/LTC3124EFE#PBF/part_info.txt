@@ -1,0 +1,9 @@
+Manufacturer=Analog Devices
+PartNumber=LTC3124EFE#PBF
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=17
+Version=1.1
+Released=2021-01-14 21:46:37
+Downloaded=2021-02-17 09:05:20
+3D=Y
