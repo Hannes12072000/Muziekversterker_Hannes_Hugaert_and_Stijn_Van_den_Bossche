@@ -1,0 +1,9 @@
+Manufacturer=CUI Devices
+PartNumber=SJ-3523-SMT-TR
+PartCategory=Connector
+PackageCategory=Other
+PinCount=3
+Version=1.10
+Released=2020-09-13 15:56:13
+Downloaded=2020-11-10 18:07:28
+3D=Y

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SJ-3523-SMT-TR
+D Phone Connectors Audio Jacks
+K
+F https://www.mouser.de/datasheet/2/670/sj_352x_smt-1779397.pdf
+$ENDCMP
+#
+#End Doc Library
