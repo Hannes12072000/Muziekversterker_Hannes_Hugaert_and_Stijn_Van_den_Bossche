@@ -1,0 +1,9 @@
+Manufacturer=Micron
+PartNumber=N25Q128A13EF840E
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline No-lead
+PinCount=9
+Version=1.1
+Released=2018-03-21 12:36:53
+Downloaded=2020-11-07 16:20:30
+3D=Y
