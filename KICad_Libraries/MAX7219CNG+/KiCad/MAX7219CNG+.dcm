@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MAX7219CNG+
+D 8-digit LED display driver,MAX7219CNG,BP MAX7219CNG+, LED Driver, 8-Digits 64-Segments, 5 V, 24-Pin PDIP N
+K
+F http://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf
+$ENDCMP
+#
+#End Doc Library

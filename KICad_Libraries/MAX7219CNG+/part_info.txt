@@ -1,0 +1,9 @@
+Manufacturer=Maxim Integrated
+PartNumber=MAX7219CNG+
+PartCategory=Integrated Circuit
+PackageCategory=Dual-In-Line Packages
+PinCount=24
+Version=3.1
+Released=2015-09-17 10:56:35
+Downloaded=2021-02-20 14:05:00
+3D=Y

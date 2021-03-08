@@ -1,0 +1,16 @@
+.MAX7219CNG-plus- :1 ;8-digit LED display driver,MAX7219CNG,BP MAX7219CNG+, LED Driver, 8-Digits 64-Segments, 5 V, 24-Pin PDIP N
+DIP794W56P254L3054H457Q24N
+*STM IC
+*NGS
+*PLB 1="DIN" 2="DIG 0" 3="DIG 4" 4="GND_1" 5="DIG 6" 6="DIG 2" 7="DIG 3" 8="DIG 7" 9="GND_2" 10="DIG 5" 11="DIG 1" 12="LOAD ('CS)'" 13="CLK" 14="SEG A" 15="SEG F" 16="SEG B" 17="SEG G" 18="ISET" 19="V+" 20="SEG C" 21="SEG E" 22="SEG DP" 23="SEG D" 24="DOUT"
+*MXP 24
+*DFN MAX7219CNG-plus-
+~!Mouser Part Number (700-MAX7219CNG)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX7219CNG%2b?qs=1THa7WoU59Gme2Z0GeVXUQ%3D%3D)
+~!Manufacturer_Name (Maxim Integrated)
+~!Manufacturer_Part_Number (MAX7219CNG+)
+~!Link Datasheet (http://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf)
+~!Height (4.572mm)
+~!3D_Model (MAX7219CNG+)
+MAX7219CNG-plus-
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 24.1!U 23.1!U 22.1!U 21.1!U 20.1!U 19.1!U 18.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 

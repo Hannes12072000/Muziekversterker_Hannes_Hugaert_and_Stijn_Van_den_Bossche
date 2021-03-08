@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "MAX7219CNG+"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-10-05-06:26:57)
+    (mountForm default
+        (footprintRef "DIP794W56P254L3054H457Q24N")
+        (spec "System")
+    )
+)
