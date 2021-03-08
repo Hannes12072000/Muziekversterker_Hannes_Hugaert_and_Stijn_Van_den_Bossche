@@ -1,0 +1,16 @@
+.SJ-3523-SMT-TR :1 ;Phone Connectors Audio Jacks
+SJ3523SMTTR
+*STM J
+*NGS
+*PLB 1="SLEEVE" 2="TIP" 3="RING"
+*MXP 5
+*DFN SJ-3523-SMT-TR
+~!Mouser Part Number (490-SJ-3523-SMT-TR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/CUI-Devices/SJ-3523-SMT-TR?qs=WyjlAZoYn51zOHzJ3r4ZRA%3D%3D)
+~!Manufacturer_Name (CUI Devices)
+~!Manufacturer_Part_Number (SJ-3523-SMT-TR)
+~!Link Datasheet (https://www.mouser.de/datasheet/2/670/sj_352x_smt-1779397.pdf)
+~!Height (5.2mm)
+~!3D_Model (SJ-3523-SMT-TR)
+SJ-3523-SMT-TR
+1.1!U 2.1!U 3.1!U 
