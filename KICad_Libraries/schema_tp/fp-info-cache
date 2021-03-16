@@ -1,4 +1,4 @@
-16939511239829048
+16941128333947891
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -75261,5 +75261,12 @@ touchpad_footprint
 
 
 0
-123
-111
+147
+144
+mengpaneel
+touchpad_footprint_LR
+
+
+0
+145
+142
