@@ -382,18 +382,6 @@ Wire Wire Line
 Wire Wire Line
 	8700 7040 8700 7140
 Wire Wire Line
-	3670 5480 3710 5480
-Wire Wire Line
-	3670 5370 3670 5480
-Wire Wire Line
-	5210 7150 5260 7150
-Wire Wire Line
-	5210 7040 5210 7150
-Wire Wire Line
-	5170 5470 5210 5470
-Wire Wire Line
-	5170 5370 5170 5470
-Wire Wire Line
 	14290 7100 14420 7100
 Connection ~ 14290 7100
 Wire Wire Line
@@ -506,8 +494,6 @@ LEDlaag_11
 Text GLabel 9140 12780 2    50   Input ~ 0
 LEDlaag_12
 Wire Notes Line
-	4340 7080 5340 7080
-Wire Notes Line
 	7850 8680 8850 8680
 Wire Notes Line
 	8850 7190 7850 7190
@@ -536,10 +522,6 @@ Slider_7.1
 Wire Notes Line
 	7670 10400 7670 11400
 Wire Notes Line
-	2880 5400 3880 5400
-Wire Notes Line
-	4330 5400 5330 5400
-Wire Notes Line
 	8850 7070 8850 6070
 Wire Notes Line
 	7850 7070 8850 7070
@@ -563,14 +545,8 @@ Text Notes 4640 3840 0    50   ~ 0
 Line 1 IN
 Text Notes 8060 3860 0    50   ~ 0
 Line 2 IN
-Text Notes 3160 3820 0    50   ~ 0
-MICROFOON
 Text Notes 10160 3850 0    50   ~ 0
 OUT 
-Text GLabel 3670 5370 1    50   Input ~ 0
-Slider_1x
-Text GLabel 5170 5370 1    50   Input ~ 0
-Slider_2x
 Text GLabel 8700 7040 1    50   Input ~ 0
 Slider_8x
 Text GLabel 8740 8640 1    50   Input ~ 0
@@ -587,24 +563,6 @@ Text GLabel 7580 10860 0    50   Input ~ 0
 Slider_7x
 Text Notes 6350 10360 0    50   ~ 0
 L-R Line 1
-Text GLabel 5210 7040 1    50   Input ~ 0
-Slider_3x
-Text GLabel 5650 11470 3    50   Input ~ 0
-laag_1
-Text GLabel 5760 11470 3    50   Input ~ 0
-laag_2
-Text GLabel 5870 11470 3    50   Input ~ 0
-laag_3
-Text GLabel 5990 11470 3    50   Input ~ 0
-laag_4
-Text GLabel 6100 11470 3    50   Input ~ 0
-laag_5
-Text GLabel 6220 11470 3    50   Input ~ 0
-laag_6
-Text GLabel 6330 11470 3    50   Input ~ 0
-laag_7
-Text GLabel 6440 11470 3    50   Input ~ 0
-laag_8
 Wire Wire Line
 	5650 11470 5650 11310
 Wire Wire Line
@@ -629,14 +587,6 @@ Text GLabel 6790 11310 1    50   Input ~ 0
 Slider_7.11
 Text GLabel 6900 11310 1    50   Input ~ 0
 Slider_7.12
-Text GLabel 6560 11470 3    50   Input ~ 0
-laag_9
-Text GLabel 6680 11470 3    50   Input ~ 0
-laag_10
-Text GLabel 6790 11470 3    50   Input ~ 0
-laag_11
-Text GLabel 6900 11470 3    50   Input ~ 0
-laag_12
 Wire Wire Line
 	6900 11470 6900 11310
 Wire Wire Line
@@ -645,224 +595,32 @@ Wire Wire Line
 	6680 11310 6680 11470
 Wire Wire Line
 	6790 11470 6790 11310
-Text GLabel 2820 5240 0    50   Input ~ 0
+Text GLabel 3040 3380 0    50   Input ~ 0
 laag_1
-Text GLabel 2820 5130 0    50   Input ~ 0
+Text GLabel 3040 3280 0    50   Input ~ 0
 laag_2
-Text GLabel 2820 5020 0    50   Input ~ 0
+Text GLabel 3040 3180 0    50   Input ~ 0
 laag_3
-Text GLabel 2820 4900 0    50   Input ~ 0
+Text GLabel 3040 3080 0    50   Input ~ 0
 laag_4
-Text GLabel 2820 4790 0    50   Input ~ 0
+Text GLabel 3040 2980 0    50   Input ~ 0
 laag_5
-Text GLabel 2820 4670 0    50   Input ~ 0
+Text GLabel 3040 2880 0    50   Input ~ 0
 laag_6
-Text GLabel 2820 4560 0    50   Input ~ 0
+Text GLabel 3040 2780 0    50   Input ~ 0
 laag_7
-Text GLabel 2820 4450 0    50   Input ~ 0
+Text GLabel 3040 2680 0    50   Input ~ 0
 laag_8
-Text GLabel 2820 4330 0    50   Input ~ 0
+Text GLabel 3040 2580 0    50   Input ~ 0
 laag_9
-Text GLabel 2820 4210 0    50   Input ~ 0
+Text GLabel 3040 2480 0    50   Input ~ 0
 laag_10
-Text GLabel 2820 4100 0    50   Input ~ 0
+Text GLabel 3040 2380 0    50   Input ~ 0
 laag_11
-Text GLabel 2820 3990 0    50   Input ~ 0
+Text GLabel 3040 2280 0    50   Input ~ 0
 laag_12
 Wire Wire Line
 	7010 11760 7010 11290
-Wire Wire Line
-	2820 4100 2980 4100
-Wire Wire Line
-	2980 4210 2820 4210
-Wire Wire Line
-	2820 4330 2980 4330
-Wire Wire Line
-	2820 3990 2980 3990
-Text GLabel 2980 3990 2    50   Input ~ 0
-Slider_7.8
-Text GLabel 2980 4100 2    50   Input ~ 0
-Slider_7.7
-Text GLabel 2980 4210 2    50   Input ~ 0
-Slider_7.6
-Text GLabel 2980 4330 2    50   Input ~ 0
-Slider_7.5
-Wire Wire Line
-	2820 4560 2980 4560
-Wire Wire Line
-	2980 4670 2820 4670
-Wire Wire Line
-	2820 4790 2980 4790
-Wire Wire Line
-	2980 4900 2820 4900
-Wire Wire Line
-	2820 5020 2980 5020
-Wire Wire Line
-	2820 4450 2980 4450
-Wire Wire Line
-	2820 5130 2980 5130
-Wire Wire Line
-	2820 5240 2980 5240
-Text GLabel 2980 5240 2    50   Input ~ 0
-Slider_7.1
-Text GLabel 2980 4450 2    50   Input ~ 0
-Slider_7.8
-Text GLabel 2980 4560 2    50   Input ~ 0
-Slider_7.7
-Text GLabel 2980 4670 2    50   Input ~ 0
-Slider_7.6
-Text GLabel 2980 4790 2    50   Input ~ 0
-Slider_7.5
-Text GLabel 2980 4900 2    50   Input ~ 0
-Slider_7.4
-Text GLabel 2980 5020 2    50   Input ~ 0
-Slider_7.3
-Text GLabel 2980 5130 2    50   Input ~ 0
-Slider_7.2
-Text GLabel 4430 5130 2    50   Input ~ 0
-Slider_7.2
-Text GLabel 4430 5020 2    50   Input ~ 0
-Slider_7.3
-Text GLabel 4430 4900 2    50   Input ~ 0
-Slider_7.4
-Text GLabel 4430 4790 2    50   Input ~ 0
-Slider_7.5
-Text GLabel 4430 4670 2    50   Input ~ 0
-Slider_7.6
-Text GLabel 4430 4560 2    50   Input ~ 0
-Slider_7.7
-Text GLabel 4430 4450 2    50   Input ~ 0
-Slider_7.8
-Text GLabel 4430 5240 2    50   Input ~ 0
-Slider_7.1
-Text GLabel 4270 5240 0    50   Input ~ 0
-laag_1
-Text GLabel 4270 5130 0    50   Input ~ 0
-laag_2
-Text GLabel 4270 5020 0    50   Input ~ 0
-laag_3
-Text GLabel 4270 4900 0    50   Input ~ 0
-laag_4
-Text GLabel 4270 4790 0    50   Input ~ 0
-laag_5
-Text GLabel 4270 4670 0    50   Input ~ 0
-laag_6
-Text GLabel 4270 4560 0    50   Input ~ 0
-laag_7
-Text GLabel 4270 4450 0    50   Input ~ 0
-laag_8
-Wire Wire Line
-	4270 5240 4430 5240
-Wire Wire Line
-	4270 5130 4430 5130
-Wire Wire Line
-	4270 4450 4430 4450
-Wire Wire Line
-	4270 5020 4430 5020
-Wire Wire Line
-	4430 4900 4270 4900
-Wire Wire Line
-	4270 4790 4430 4790
-Wire Wire Line
-	4430 4670 4270 4670
-Wire Wire Line
-	4270 4560 4430 4560
-Text GLabel 4430 4330 2    50   Input ~ 0
-Slider_7.5
-Text GLabel 4430 4210 2    50   Input ~ 0
-Slider_7.6
-Text GLabel 4430 4100 2    50   Input ~ 0
-Slider_7.7
-Text GLabel 4430 3990 2    50   Input ~ 0
-Slider_7.8
-Text GLabel 4270 4330 0    50   Input ~ 0
-laag_9
-Text GLabel 4270 4210 0    50   Input ~ 0
-laag_10
-Text GLabel 4270 4100 0    50   Input ~ 0
-laag_11
-Text GLabel 4270 3990 0    50   Input ~ 0
-laag_12
-Wire Wire Line
-	4270 3990 4430 3990
-Wire Wire Line
-	4270 4330 4430 4330
-Wire Wire Line
-	4430 4210 4270 4210
-Wire Wire Line
-	4270 4100 4430 4100
-Text GLabel 4460 6810 2    50   Input ~ 0
-Slider_7.2
-Text GLabel 4460 6700 2    50   Input ~ 0
-Slider_7.3
-Text GLabel 4460 6580 2    50   Input ~ 0
-Slider_7.4
-Text GLabel 4460 6470 2    50   Input ~ 0
-Slider_7.5
-Text GLabel 4460 6350 2    50   Input ~ 0
-Slider_7.6
-Text GLabel 4460 6240 2    50   Input ~ 0
-Slider_7.7
-Text GLabel 4460 6130 2    50   Input ~ 0
-Slider_7.8
-Text GLabel 4460 6920 2    50   Input ~ 0
-Slider_7.1
-Text GLabel 4300 6920 0    50   Input ~ 0
-laag_1
-Text GLabel 4300 6810 0    50   Input ~ 0
-laag_2
-Text GLabel 4300 6700 0    50   Input ~ 0
-laag_3
-Text GLabel 4300 6580 0    50   Input ~ 0
-laag_4
-Text GLabel 4300 6470 0    50   Input ~ 0
-laag_5
-Text GLabel 4300 6350 0    50   Input ~ 0
-laag_6
-Text GLabel 4300 6240 0    50   Input ~ 0
-laag_7
-Text GLabel 4300 6130 0    50   Input ~ 0
-laag_8
-Wire Wire Line
-	4300 6920 4460 6920
-Wire Wire Line
-	4300 6810 4460 6810
-Wire Wire Line
-	4300 6130 4460 6130
-Wire Wire Line
-	4300 6700 4460 6700
-Wire Wire Line
-	4460 6580 4300 6580
-Wire Wire Line
-	4300 6470 4460 6470
-Wire Wire Line
-	4460 6350 4300 6350
-Wire Wire Line
-	4300 6240 4460 6240
-Text GLabel 4460 6010 2    50   Input ~ 0
-Slider_7.5
-Text GLabel 4460 5890 2    50   Input ~ 0
-Slider_7.6
-Text GLabel 4460 5780 2    50   Input ~ 0
-Slider_7.7
-Text GLabel 4460 5670 2    50   Input ~ 0
-Slider_7.8
-Text GLabel 4300 6010 0    50   Input ~ 0
-laag_9
-Text GLabel 4300 5890 0    50   Input ~ 0
-laag_10
-Text GLabel 4300 5780 0    50   Input ~ 0
-laag_11
-Text GLabel 4300 5670 0    50   Input ~ 0
-laag_12
-Wire Wire Line
-	4300 5670 4460 5670
-Wire Wire Line
-	4300 6010 4460 6010
-Wire Wire Line
-	4460 5890 4300 5890
-Wire Wire Line
-	4300 5780 4460 5780
 Text GLabel 7950 6800 2    50   Input ~ 0
 Slider_8.2
 Text GLabel 7950 6690 2    50   Input ~ 0
@@ -1017,24 +775,6 @@ Wire Notes Line
 	7850 5570 7850 7070
 Wire Notes Line
 	7850 5570 8850 5570
-Wire Notes Line
-	5340 5590 5340 7080
-Wire Notes Line
-	4340 5590 5340 5590
-Wire Notes Line
-	4340 5590 4340 7080
-Wire Notes Line
-	5330 3910 5330 5400
-Wire Notes Line
-	4330 3910 4330 5400
-Wire Notes Line
-	4330 3910 5330 3910
-Wire Notes Line
-	3880 3900 3880 5400
-Wire Notes Line
-	2880 3900 2880 5400
-Wire Notes Line
-	2880 3900 3880 3900
 Text GLabel 4420 8420 2    50   Input ~ 0
 Slider_4.2
 Text GLabel 4420 8310 2    50   Input ~ 0
@@ -1538,55 +1278,8 @@ F 3 "" H 7540 7020 50  0001 C CNN
 $EndComp
 Text GLabel 7950 7020 2    50   Input ~ 0
 GND
-Text GLabel 4460 7030 2    50   Input ~ 0
-GND
-$Comp
-L power:GND #PWR0206
-U 1 1 69355197
-P 4100 5350
-F 0 "#PWR0206" H 4100 5100 50  0001 C CNN
-F 1 "GND" H 4105 5177 50  0000 C CNN
-F 2 "" H 4100 5350 50  0001 C CNN
-F 3 "" H 4100 5350 50  0001 C CNN
-	1    4100 5350
-	0    1    1    0   
-$EndComp
-Text GLabel 4430 5350 2    50   Input ~ 0
-GND
-Wire Wire Line
-	2570 5350 2980 5350
-$Comp
-L power:GND #PWR0205
-U 1 1 69402959
-P 2570 5350
-F 0 "#PWR0205" H 2570 5100 50  0001 C CNN
-F 1 "GND" H 2575 5177 50  0000 C CNN
-F 2 "" H 2570 5350 50  0001 C CNN
-F 3 "" H 2570 5350 50  0001 C CNN
-	1    2570 5350
-	0    1    1    0   
-$EndComp
-Text GLabel 2980 5350 2    50   Input ~ 0
-GND
-$Comp
-L power:GND #PWR0204
-U 1 1 692A847F
-P 4130 7030
-F 0 "#PWR0204" H 4130 6780 50  0001 C CNN
-F 1 "GND" H 4135 6857 50  0000 C CNN
-F 2 "" H 4130 7030 50  0001 C CNN
-F 3 "" H 4130 7030 50  0001 C CNN
-	1    4130 7030
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7670 8630 7980 8630
-Wire Wire Line
-	4100 5350 4430 5350
-Wire Wire Line
-	4130 7030 4460 7030
-Text GLabel 3710 5480 2    50   Input ~ 0
-slider_1
 Text GLabel 5210 5470 2    50   Input ~ 0
 slider_2
 Text GLabel 5260 7150 2    50   Input ~ 0
@@ -1595,7 +1288,7 @@ Text GLabel 8750 7140 2    50   Input ~ 0
 slider_8
 Text GLabel 8780 8750 2    50   Input ~ 0
 slider_9
-Text GLabel 7730 10860 2    50   Input ~ 0
+Text GLabel 8690 11950 3    50   Input ~ 0
 slider_7
 Text GLabel 10670 5460 2    50   Input ~ 0
 slider_11
@@ -6798,7 +6491,7 @@ CS_POT_mic
 Text GLabel 19160 10390 0    50   Input ~ 0
 CLK
 $Comp
-L LTC3121EDE#PBF:LTC3121EDE#PBF IC4
+L mengpaneel-rescue:LTC3121EDE#PBF-LTC3121EDE#PBF IC4
 U 1 1 6094A552
 P 13880 14850
 F 0 "IC4" H 14580 15115 50  0000 C CNN
@@ -6815,7 +6508,7 @@ F 9 "LTC3121EDE#PBF" H 15130 14250 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SJ-63053A:SJ-63053A J4
+L mengpaneel-rescue:SJ-63053A-SJ-63053A J4
 U 1 1 60ABE1CD
 P 18810 5970
 F 0 "J4" H 19210 6235 50  0000 C CNN
@@ -6832,7 +6525,7 @@ F 9 "SJ-63053A" H 19460 5370 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    1   
 $EndComp
 $Comp
-L UJ2-MIBH-G-SMT-TR:UJ2-MIBH-G-SMT-TR J1
+L mengpaneel-rescue:UJ2-MIBH-G-SMT-TR-UJ2-MIBH-G-SMT-TR J1
 U 1 1 60AC3437
 P 11380 12980
 F 0 "J1" H 11830 13245 50  0000 C CNN
@@ -6849,7 +6542,7 @@ F 9 "UJ2-MIBH-G-SMT-TR" H 12130 12380 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L AD5204BRUZ10-REEL7:AD5204BRUZ10-REEL7 IC5
+L mengpaneel-rescue:AD5204BRUZ10-REEL7-AD5204BRUZ10-REEL7 IC5
 U 1 1 60AD2C44
 P 15550 19860
 F 0 "IC5" H 16100 20125 50  0000 C CNN
@@ -7034,7 +6727,7 @@ Wire Wire Line
 Wire Wire Line
 	17940 17940 18010 17940
 $Comp
-L LM3480IM3-3.3_NOPB:LM3480IM3-3.3_NOPB IC7
+L mengpaneel-rescue:LM3480IM3-3.3_NOPB-LM3480IM3-3.3_NOPB IC7
 U 1 1 60ABB371
 P 16940 17940
 F 0 "IC7" H 17440 18205 50  0000 C CNN
@@ -7097,7 +6790,7 @@ F 3 "" H 18810 5970 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L SJ-63053A:SJ-63053A J5
+L mengpaneel-rescue:SJ-63053A-SJ-63053A J5
 U 1 1 6D78DD70
 P 18850 15100
 F 0 "J5" H 19250 15365 50  0000 C CNN
@@ -7125,7 +6818,7 @@ F 3 "" H 18850 15100 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L SJ-63053A:SJ-63053A J6
+L mengpaneel-rescue:SJ-63053A-SJ-63053A J6
 U 1 1 6D90AE19
 P 18960 3570
 F 0 "J6" H 19360 3835 50  0000 C CNN
@@ -7156,7 +6849,7 @@ Wire Wire Line
 	19760 3470 19760 3570
 Connection ~ 19760 3570
 $Comp
-L SJ-63053A:SJ-63053A J7
+L mengpaneel-rescue:SJ-63053A-SJ-63053A J7
 U 1 1 6E077880
 P 32500 11300
 F 0 "J7" H 32900 11565 50  0000 C CNN
@@ -7231,17 +6924,6 @@ Connection ~ 12350 13280
 Wire Wire Line
 	12350 13280 12420 13280
 Connection ~ 11320 13280
-$Comp
-L schema_tp-cache:touchpad_lib_Touchpad_mp U30
-U 1 1 71D5D42C
-P 6380 8640
-F 0 "U30" H 6455 9005 50  0000 C CNN
-F 1 "touchpad_lib_Touchpad_mp" H 6455 8914 50  0000 C CNN
-F 2 "" H 6380 9140 50  0001 C CNN
-F 3 "" H 6380 9140 50  0001 C CNN
-	1    6380 8640
-	1    0    0    -1  
-$EndComp
 NoConn ~ 15550 19860
 NoConn ~ 15550 19960
 $Comp
@@ -7271,7 +6953,7 @@ L1.1
 Text GLabel 15550 20760 0    35   Input ~ 0
 L1.2
 $Comp
-L AD5204BRUZ10-REEL7:AD5204BRUZ10-REEL7 IC8
+L mengpaneel-rescue:AD5204BRUZ10-REEL7-AD5204BRUZ10-REEL7 IC8
 U 1 1 737456F2
 P 17970 19840
 F 0 "IC8" H 18520 20105 50  0000 C CNN
@@ -7316,7 +6998,7 @@ L1.2
 Text GLabel 17970 20740 0    35   Input ~ 0
 L1.3
 $Comp
-L AD5204BRUZ10-REEL7:AD5204BRUZ10-REEL7 IC11
+L mengpaneel-rescue:AD5204BRUZ10-REEL7-AD5204BRUZ10-REEL7 IC11
 U 1 1 738C903E
 P 20400 19860
 F 0 "IC11" H 20950 20125 50  0000 C CNN
@@ -7361,7 +7043,7 @@ L1.3
 Text GLabel 20400 20760 0    35   Input ~ 0
 L1.4
 $Comp
-L AD5204BRUZ10-REEL7:AD5204BRUZ10-REEL7 IC6
+L mengpaneel-rescue:AD5204BRUZ10-REEL7-AD5204BRUZ10-REEL7 IC6
 U 1 1 73A4C8F7
 P 15580 21500
 F 0 "IC6" H 16130 21765 50  0000 C CNN
@@ -7406,7 +7088,7 @@ L1.4
 Text GLabel 15580 22400 0    35   Input ~ 0
 L1.5
 $Comp
-L AD5204BRUZ10-REEL7:AD5204BRUZ10-REEL7 IC9
+L mengpaneel-rescue:AD5204BRUZ10-REEL7-AD5204BRUZ10-REEL7 IC9
 U 1 1 73BD0676
 P 17970 21470
 F 0 "IC9" H 18520 21735 50  0000 C CNN
@@ -7869,10 +7551,10 @@ Wire Wire Line
 	13730 10230 14250 10230
 Connection ~ 13730 9780
 $Comp
-L Device:C C?
+L Device:C C48
 U 1 1 7473720C
 P 13340 9980
-F 0 "C?" H 13455 10026 50  0000 L CNN
+F 0 "C48" H 13455 10026 50  0000 L CNN
 F 1 "0.1µF" H 13455 9935 50  0000 L CNN
 F 2 "" H 13378 9830 50  0001 C CNN
 F 3 "~" H 13340 9980 50  0001 C CNN
@@ -7905,10 +7587,10 @@ Wire Wire Line
 Text GLabel 15280 8580 1    50   Input ~ 0
 3.3V
 $Comp
-L Device:C C?
+L Device:C C49
 U 1 1 7567756F
 P 16080 11230
-F 0 "C?" H 16195 11276 50  0000 L CNN
+F 0 "C49" H 16195 11276 50  0000 L CNN
 F 1 "0.1µF" H 16195 11185 50  0000 L CNN
 F 2 "" H 16118 11080 50  0001 C CNN
 F 3 "~" H 16080 11230 50  0001 C CNN
@@ -7925,10 +7607,10 @@ Connection ~ 16080 11380
 Text GLabel 14880 9280 0    50   Input ~ 0
 3.3V
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0139
 U 1 1 762C615B
 P 15380 8070
-F 0 "#PWR?" H 15380 7820 50  0001 C CNN
+F 0 "#PWR0139" H 15380 7820 50  0001 C CNN
 F 1 "GND" H 15385 7897 50  0000 C CNN
 F 2 "" H 15380 8070 50  0001 C CNN
 F 3 "" H 15380 8070 50  0001 C CNN
@@ -7945,10 +7627,10 @@ Wire Wire Line
 	15680 8580 15680 8400
 Connection ~ 15380 8070
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0140
 U 1 1 76D8E73A
 P 16080 11500
-F 0 "#PWR?" H 16080 11250 50  0001 C CNN
+F 0 "#PWR0140" H 16080 11250 50  0001 C CNN
 F 1 "GND" H 16085 11327 50  0000 C CNN
 F 2 "" H 16080 11500 50  0001 C CNN
 F 3 "" H 16080 11500 50  0001 C CNN
@@ -7956,10 +7638,10 @@ F 3 "" H 16080 11500 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0141
 U 1 1 770A7940
 P 16860 9380
-F 0 "#PWR?" H 16860 9130 50  0001 C CNN
+F 0 "#PWR0141" H 16860 9130 50  0001 C CNN
 F 1 "GND" H 16865 9207 50  0000 C CNN
 F 2 "" H 16860 9380 50  0001 C CNN
 F 3 "" H 16860 9380 50  0001 C CNN
@@ -8063,12 +7745,12 @@ NoConn ~ 19970 13030
 NoConn ~ 18570 13230
 NoConn ~ 18570 13130
 $Comp
-L LTC3631EMS8E#TRPBF:LTC3631EMS8E#TRPBF IC12
+L mengpaneel-rescue:LTC3631EMS8E#TRPBF-LTC3631EMS8E#TRPBF IC12
 U 1 1 6EDA0DBB
 P 18570 12930
 F 0 "IC12" H 19270 13195 50  0000 C CNN
 F 1 "LTC3631EMS8E#TRPBF" H 19270 13104 50  0000 C CNN
-F 2 "SOP65P490X110-9N" H 19820 13030 50  0001 L CNN
+F 2 "LTC3631EMS8E#TRPBF:SOP65P490X110-9N" H 19820 13030 50  0001 L CNN
 F 3 "https://www.arrow.com/en/products/ltc3631ems8etrpbf/analog-devices" H 19820 12930 50  0001 L CNN
 F 4 "Conv DC-DC 4.5V to 45V Synchronous Step Down Single-Out 0.8V to 45V 0.1A Automotive 8-Pin MSOP EP T/" H 19820 12830 50  0001 L CNN "Description"
 F 5 "1.1" H 19820 12730 50  0001 L CNN "Height"
@@ -8135,7 +7817,7 @@ F 3 "~" H 20770 13130 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L STM32F411CEU7:STM32F411CEU7 IC10
+L mengpaneel-rescue:STM32F411CEU7-STM32F411CEU7 IC10
 U 1 1 60AC800D
 P 14880 9280
 F 0 "IC10" H 14660 9760 50  0000 L CNN
@@ -8192,4 +7874,153 @@ Wire Wire Line
 	15380 11080 15380 11630
 Wire Wire Line
 	15380 11630 14620 11630
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp_LR U13
+U 1 1 609ED08E
+P 8640 10800
+F 0 "U13" H 8715 11165 50  0000 C CNN
+F 1 "Touchpad_mp_LR" H 8715 11074 50  0000 C CNN
+F 2 "schema_tp:touchpad_footprint_LR" H 8640 11300 50  0001 C CNN
+F 3 "" H 8640 11300 50  0001 C CNN
+	1    8640 10800
+	1    0    0    -1  
+$EndComp
+Text GLabel 6900 11470 3    50   Input ~ 0
+laag_12
+Text GLabel 6790 11470 3    50   Input ~ 0
+laag_11
+Text GLabel 6680 11470 3    50   Input ~ 0
+laag_10
+Text GLabel 6560 11470 3    50   Input ~ 0
+laag_9
+Text GLabel 6440 11470 3    50   Input ~ 0
+laag_8
+Text GLabel 6330 11470 3    50   Input ~ 0
+laag_7
+Text GLabel 6220 11470 3    50   Input ~ 0
+laag_6
+Text GLabel 6100 11470 3    50   Input ~ 0
+laag_5
+Text GLabel 5990 11470 3    50   Input ~ 0
+laag_4
+Text GLabel 5870 11470 3    50   Input ~ 0
+laag_3
+Text GLabel 5760 11470 3    50   Input ~ 0
+laag_2
+Text GLabel 5650 11470 3    50   Input ~ 0
+laag_1
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U8
+U 1 1 6111DA03
+P 4680 2400
+F 0 "U8" H 4755 2765 50  0000 C CNN
+F 1 "Touchpad_mp" H 4755 2674 50  0000 C CNN
+F 2 "schema_tp:touchpad_footprint_normaal" H 4680 2900 50  0001 C CNN
+F 3 "" H 4680 2900 50  0001 C CNN
+	1    4680 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U11
+U 1 1 61122764
+P 7970 2400
+F 0 "U11" H 8045 2765 50  0000 C CNN
+F 1 "Touchpad_mp" H 8045 2674 50  0000 C CNN
+F 2 "" H 7970 2900 50  0001 C CNN
+F 3 "" H 7970 2900 50  0001 C CNN
+	1    7970 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U17
+U 1 1 611253C2
+P 9870 2430
+F 0 "U17" H 9945 2795 50  0000 C CNN
+F 1 "Touchpad_mp" H 9945 2704 50  0000 C CNN
+F 2 "" H 9870 2930 50  0001 C CNN
+F 3 "" H 9870 2930 50  0001 C CNN
+	1    9870 2430
+	1    0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U4
+U 1 1 611282A8
+P 3300 5890
+F 0 "U4" H 3375 6255 50  0000 C CNN
+F 1 "Touchpad_mp" H 3375 6164 50  0000 C CNN
+F 2 "" H 3300 6390 50  0001 C CNN
+F 3 "" H 3300 6390 50  0001 C CNN
+	1    3300 5890
+	1    0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U16
+U 1 1 6112CC43
+P 9810 6030
+F 0 "U16" H 9885 6395 50  0000 C CNN
+F 1 "Touchpad_mp" H 9885 6304 50  0000 C CNN
+F 2 "" H 9810 6530 50  0001 C CNN
+F 3 "" H 9810 6530 50  0001 C CNN
+	1    9810 6030
+	1    0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U2
+U 1 1 6113144E
+P 3200 7610
+F 0 "U2" H 3275 7975 50  0000 C CNN
+F 1 "Touchpad_mp" H 3275 7884 50  0000 C CNN
+F 2 "" H 3200 8110 50  0001 C CNN
+F 3 "" H 3200 8110 50  0001 C CNN
+	1    3200 7610
+	1    0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U14
+U 1 1 611340E2
+P 9730 7730
+F 0 "U14" H 9805 8095 50  0000 C CNN
+F 1 "Touchpad_mp" H 9805 8004 50  0000 C CNN
+F 2 "" H 9730 8230 50  0001 C CNN
+F 3 "" H 9730 8230 50  0001 C CNN
+	1    9730 7730
+	1    0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U3
+U 1 1 61134CC0
+P 3200 9290
+F 0 "U3" H 3275 9655 50  0000 C CNN
+F 1 "Touchpad_mp" H 3275 9564 50  0000 C CNN
+F 2 "" H 3200 9790 50  0001 C CNN
+F 3 "" H 3200 9790 50  0001 C CNN
+	1    3200 9290
+	1    0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U15
+U 1 1 6113700C
+P 9730 9430
+F 0 "U15" H 9805 9795 50  0000 C CNN
+F 1 "Touchpad_mp" H 9805 9704 50  0000 C CNN
+F 2 "" H 9730 9930 50  0001 C CNN
+F 3 "" H 9730 9930 50  0001 C CNN
+	1    9730 9430
+	1    0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U6
+U 1 1 6111A5AB
+P 3340 2380
+F 0 "U6" H 3415 2745 50  0000 C CNN
+F 1 "Touchpad_mp" H 3415 2654 50  0000 C CNN
+F 2 "" H 3340 2880 50  0001 C CNN
+F 3 "" H 3340 2880 50  0001 C CNN
+	1    3340 2380
+	1    0    0    -1  
+$EndComp
+Text GLabel 3990 3450 3    50   Input ~ 0
+slider_1
+Text Notes 3160 3820 0    50   ~ 0
+MICROFOON
 $EndSCHEMATC
