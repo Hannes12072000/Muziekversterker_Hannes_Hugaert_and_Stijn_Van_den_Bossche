@@ -66,7 +66,7 @@
   (pad 43 smd rect (at -2.6 -3.95 0) (size 0.35 0.85) (layers F.Cu F.Paste F.Mask))
   (pad 44 smd rect (at -3.25 -3.95 0) (size 0.35 0.85) (layers F.Cu F.Paste F.Mask))
   (pad 45 smd rect (at 0 0 0) (size 6.6 6.6) (layers F.Cu F.Paste F.Mask))
-  (model "C:\\Users\\hanne\\Downloads\\SamacSys_Parts.3dshapes\\MTCH6301-I_ML.stp"
+  (model MTCH6301-I_ML.stp
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))

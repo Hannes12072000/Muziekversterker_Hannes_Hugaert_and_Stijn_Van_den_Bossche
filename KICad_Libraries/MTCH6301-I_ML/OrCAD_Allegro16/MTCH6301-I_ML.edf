@@ -6,8 +6,8 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2021 02 17 09 51 19)
-      (dataOrigin "258198/234443/2.48/45/3/Integrated Circuit")
+      (timestamp 2021 03 13 09 57 35)
+      (dataOrigin "258198/429985/2.49/45/3/Integrated Circuit")
       (program "SamacSys ECAD Model MTCH6301_I_ML"
         (version "1.1"))))
   (library

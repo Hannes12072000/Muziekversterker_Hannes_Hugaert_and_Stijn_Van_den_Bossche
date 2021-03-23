@@ -1,5 +1,5 @@
 PULSONIX_LIBRARY_ASCII "SamacSys ECAD Model"
-//258198/234443/2.48/45/3/Integrated Circuit
+//258198/429985/2.49/45/3/Integrated Circuit
 
 (asciiHeader
 	(fileUnits MM)

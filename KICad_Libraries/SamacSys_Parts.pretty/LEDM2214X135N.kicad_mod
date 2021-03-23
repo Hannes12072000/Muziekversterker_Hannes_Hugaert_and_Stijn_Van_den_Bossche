@@ -1,5 +1,5 @@
 (module "LEDM2214X135N" (layer F.Cu)
-  (descr "598-8C80-107F")
+  (descr "MINI-PLCC2 PACKAGE")
   (tags "LED")
   (attr smd)
   (fp_text reference LED** (at 0 0) (layer F.SilkS)

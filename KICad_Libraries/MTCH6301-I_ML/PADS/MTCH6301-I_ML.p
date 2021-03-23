@@ -1,7 +1,7 @@
 *PADS-LIBRARY-PART-TYPES-V9*
 
 MTCH6301-I_ML QFN65P800X800X100-45N-D I ANA 7 1 0 0 0
-TIMESTAMP 2021.02.17.09.51.19
+TIMESTAMP 2021.03.13.09.57.35
 "Mouser Part Number" 579-MTCH6301-I/ML
 "Mouser Price/Stock" https://www.mouser.co.uk/ProductDetail/Microchip-Technology/MTCH6301-I-ML?qs=VteoEApvSICWu1DtjlRtOA%3D%3D
 "Manufacturer_Name" Microchip
@@ -59,4 +59,4 @@ MTCH6301-I_ML
 
 *END*
 *REMARK* SamacSys ECAD Model
-258198/234443/2.48/45/3/Integrated Circuit
+258198/429985/2.49/45/3/Integrated Circuit

@@ -45,7 +45,7 @@
   (pad 22 thru_hole circle (at 3.97 -8.89) (size 1.16 1.16) (drill 0.76) (layers *.Cu *.Mask))
   (pad 23 thru_hole circle (at 3.97 -11.43) (size 1.16 1.16) (drill 0.76) (layers *.Cu *.Mask))
   (pad 24 thru_hole circle (at 3.97 -13.97) (size 1.16 1.16) (drill 0.76) (layers *.Cu *.Mask))
-  (model "C:\\Users\\hanne\\Downloads\\SamacSys_Parts.3dshapes\\MAX7219CNG+.stp"
+  (model MAX7219CNG+.stp
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))

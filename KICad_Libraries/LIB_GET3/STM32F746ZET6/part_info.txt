@@ -1,9 +1,0 @@
-Manufacturer=STMicroelectronics
-PartNumber=STM32F746ZET6
-PartCategory=Integrated Circuit
-PackageCategory=Quad Flat Packages
-PinCount=144
-Version=1.1
-Released=2020-10-24 07:54:34
-Downloaded=2020-11-10 18:12:42
-3D=Y

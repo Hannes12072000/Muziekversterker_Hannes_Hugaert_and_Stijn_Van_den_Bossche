@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP MCT06030D2201BP100
-D Vishay MCT Series Precision Thin Film Surface Mount Resistor 0603 Case 2.2k +/-0.1% 0.1W +/-25ppm/C
-K
-F http://www.vishay.com/docs/28705/mcx0x0xpro.pdf
-$ENDCMP
-#
-#End Doc Library

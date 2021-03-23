@@ -5,5 +5,5 @@ PackageCategory=Quad Flat No-Lead
 PinCount=45
 Version=1.1
 Released=2021-02-17 09:02:20
-Downloaded=2021-02-17 09:51:19
+Downloaded=2021-03-13 09:57:35
 3D=Y

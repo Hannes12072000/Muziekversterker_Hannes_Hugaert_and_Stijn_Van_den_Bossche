@@ -1,7 +1,7 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #SamacSys ECAD Model MAX7219CNG+
-#/1408/234443/2.48/24/3/Integrated Circuit
+#/1408/429985/2.49/24/3/Integrated Circuit
 DEF MAX7219CNG+ IC 0 30 Y Y 1 F N
 F0 "IC" 1350 300 50 H V L CNN
 F1 "MAX7219CNG+" 1350 200 50 H V L CNN

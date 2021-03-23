@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP N25Q128A13EF840E
-D IC FLASH 128MBIT 108MHZ 8VDFPN
-K
-F http://www.micron.com/~/media/Documents/Products/Data%20Sheet/NOR%20Flash/Serial%20NOR/N25Q/n25q_128mb_3v_65nm.pdf
-$ENDCMP
-#
-#End Doc Library

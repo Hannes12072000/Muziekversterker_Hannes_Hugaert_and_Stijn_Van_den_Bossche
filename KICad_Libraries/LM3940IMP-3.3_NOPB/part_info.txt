@@ -1,9 +1,0 @@
-Manufacturer=Texas Instruments
-PartNumber=LM3940IMP-3.3/NOPB
-PartCategory=Integrated Circuit
-PackageCategory=SOT223 (3-Pin)
-PinCount=4
-Version=2.1
-Released=2015-04-21 09:42:40
-Downloaded=2020-03-03 15:54:19
-3D=Y

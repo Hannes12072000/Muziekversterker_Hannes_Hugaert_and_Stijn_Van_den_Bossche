@@ -1,7 +1,7 @@
 *PADS-LIBRARY-PART-TYPES-V9*
 
 MAX7219CNG+ DIP794W56P254L3054H457Q24N I ANA 7 1 0 0 0
-TIMESTAMP 2021.02.20.14.05.00
+TIMESTAMP 2021.03.13.09.56.19
 "Mouser Part Number" 700-MAX7219CNG
 "Mouser Price/Stock" https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX7219CNG%2b?qs=1THa7WoU59Gme2Z0GeVXUQ%3D%3D
 "Manufacturer_Name" Maxim Integrated
@@ -38,4 +38,4 @@ MAX7219CNG+
 
 *END*
 *REMARK* SamacSys ECAD Model
-1408/234443/2.48/24/3/Integrated Circuit
+1408/429985/2.49/24/3/Integrated Circuit

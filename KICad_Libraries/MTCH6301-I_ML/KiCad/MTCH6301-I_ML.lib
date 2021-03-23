@@ -1,7 +1,7 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #SamacSys ECAD Model MTCH6301-I_ML
-#/258198/234443/2.48/45/3/Integrated Circuit
+#/258198/429985/2.49/45/3/Integrated Circuit
 DEF MTCH6301-I_ML IC 0 30 Y Y 1 F N
 F0 "IC" 1550 700 50 H V L CNN
 F1 "MTCH6301-I_ML" 1550 600 50 H V L CNN

@@ -28,7 +28,7 @@
   (pad 1 smd rect (at -1.05 -0.95 90) (size 0.6 1.25) (layers F.Cu F.Paste F.Mask))
   (pad 2 smd rect (at -1.05 0.95 90) (size 0.6 1.25) (layers F.Cu F.Paste F.Mask))
   (pad 3 smd rect (at 1.05 0 90) (size 0.6 1.25) (layers F.Cu F.Paste F.Mask))
-  (model "C:\\Users\\hanne\\Downloads\\SamacSys_Parts.3dshapes\\LM3480IM3-3.3_NOPB.stp"
+  (model LM3480IM3-3.3_NOPB.stp
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))

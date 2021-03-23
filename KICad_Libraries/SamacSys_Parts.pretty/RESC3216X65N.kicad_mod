@@ -1,5 +1,5 @@
 (module "RESC3216X65N" (layer F.Cu)
-  (descr "RCS1206 e32")
+  (descr "RCS1206_2020")
   (tags "Resistor")
   (attr smd)
   (fp_text reference R** (at 0 0) (layer F.SilkS)
@@ -22,7 +22,7 @@
   (fp_line (start 0 -0.7) (end 0 0.7) (layer F.SilkS) (width 0.2))
   (pad 1 smd rect (at -1.5 0 0) (size 1.05 1.8) (layers F.Cu F.Paste F.Mask))
   (pad 2 smd rect (at 1.5 0 0) (size 1.05 1.8) (layers F.Cu F.Paste F.Mask))
-  (model RCS12064K70FKEA.stp
+  (model RCS120622K0JNEA.stp
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
