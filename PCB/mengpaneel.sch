@@ -5285,7 +5285,7 @@ U 1 1 732690A9
 P 17420 15170
 F 0 "C72" H 17535 15216 50  0000 L CNN
 F 1 "0,1µ" H 17535 15125 50  0000 L CNN
-F 2 "06031C104K4Z2A:CAPC1608X90N" H 17458 15020 50  0001 C CNN
+F 2 "0603YC104J4T4A:CAPC1608X90N" H 17458 15020 50  0001 C CNN
 F 3 "~" H 17420 15170 50  0001 C CNN
 	1    17420 15170
 	1    0    0    -1  
@@ -5296,7 +5296,7 @@ U 1 1 7326B98D
 P 17420 15630
 F 0 "C73" H 17535 15676 50  0000 L CNN
 F 1 "0.1µ" H 17535 15585 50  0000 L CNN
-F 2 "06031C104K4Z2A:CAPC1608X90N" H 17458 15480 50  0001 C CNN
+F 2 "0603YC104J4T4A:CAPC1608X90N" H 17458 15480 50  0001 C CNN
 F 3 "~" H 17420 15630 50  0001 C CNN
 	1    17420 15630
 	1    0    0    -1  
@@ -6664,17 +6664,6 @@ NoConn ~ 14880 9480
 NoConn ~ 14880 9580
 NoConn ~ 14880 9380
 $Comp
-L touchpad_mengpaneel_library:Touchpad_mp_LR U13
-U 1 1 609ED08E
-P 6680 10900
-F 0 "U13" H 6755 11265 50  0000 C CNN
-F 1 "Touchpad_mp_LR" H 6755 11174 50  0000 C CNN
-F 2 "schema_tp:touchpad_footprint_LR" H 6680 11400 50  0001 C CNN
-F 3 "" H 6680 11400 50  0001 C CNN
-	1    6680 10900
-	1    0    0    -1  
-$EndComp
-$Comp
 L touchpad_mengpaneel_library:Touchpad_mp U8
 U 1 1 6111DA03
 P 4720 4250
@@ -7115,66 +7104,6 @@ Text GLabel 4440 9280 0    50   Input ~ 0
 laag3_11
 Text GLabel 4440 9180 0    50   Input ~ 0
 laag3_12
-Text GLabel 8650 10280 2    50   Input ~ 0
-laag4_1
-Text GLabel 8650 10180 2    50   Input ~ 0
-laag4_2
-Text GLabel 8650 10080 2    50   Input ~ 0
-laag4_3
-Text GLabel 8650 9980 2    50   Input ~ 0
-laag4_4
-Text GLabel 8650 9880 2    50   Input ~ 0
-laag4_5
-Text GLabel 8650 9780 2    50   Input ~ 0
-laag4_6
-Text GLabel 8650 9680 2    50   Input ~ 0
-laag4_7
-Text GLabel 8650 9580 2    50   Input ~ 0
-laag4_8
-Text GLabel 8650 9480 2    50   Input ~ 0
-laag4_9
-Text GLabel 8650 9380 2    50   Input ~ 0
-laag4_10
-Text GLabel 8650 9280 2    50   Input ~ 0
-laag4_11
-Text GLabel 8650 9180 2    50   Input ~ 0
-laag4_12
-Text GLabel 6380 11900 0    50   Input ~ 0
-laag4_1
-Text GLabel 6380 11800 0    50   Input ~ 0
-laag4_2
-Text GLabel 6380 11700 0    50   Input ~ 0
-laag4_3
-Text GLabel 6380 11600 0    50   Input ~ 0
-laag4_4
-Text GLabel 6380 11500 0    50   Input ~ 0
-laag4_5
-Text GLabel 6380 11400 0    50   Input ~ 0
-laag4_6
-Text GLabel 6380 11300 0    50   Input ~ 0
-laag4_7
-Text GLabel 6380 11200 0    50   Input ~ 0
-laag4_8
-Text GLabel 6380 11100 0    50   Input ~ 0
-laag4_9
-Text GLabel 6380 11000 0    50   Input ~ 0
-laag4_10
-Text GLabel 6380 10900 0    50   Input ~ 0
-laag4_11
-Text GLabel 6380 10800 0    50   Input ~ 0
-laag4_12
-NoConn ~ 7130 10800
-NoConn ~ 7130 10900
-NoConn ~ 7130 11000
-NoConn ~ 7130 11100
-NoConn ~ 7130 11200
-NoConn ~ 7130 11300
-NoConn ~ 7130 11400
-NoConn ~ 7130 11500
-NoConn ~ 7130 11600
-NoConn ~ 7130 11700
-NoConn ~ 7130 11800
-NoConn ~ 7130 11900
 $Comp
 L Connector:Screw_Terminal_01x03 J2
 U 1 1 729C4271
@@ -7495,4 +7424,67 @@ Text GLabel 24050 18970 3    35   Input ~ 0
 POT17_W
 Text GLabel 23850 18970 3    35   Input ~ 0
 POT17_A
+Wire Wire Line
+	4470 13280 5060 13280
+Connection ~ 4470 13280
+Connection ~ 5060 13280
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp_LR U13
+U 1 1 609ED08E
+P 6680 10900
+F 0 "U13" H 6755 11265 50  0000 C CNN
+F 1 "Touchpad_mp_LR" H 6755 11174 50  0000 C CNN
+F 2 "schema_tp:touchpad_footprint_LR" H 6680 11400 50  0001 C CNN
+F 3 "" H 6680 11400 50  0001 C CNN
+	1    6680 10900
+	1    0    0    -1  
+$EndComp
+Text GLabel 7130 11900 2    50   Input ~ 0
+laag_1
+Text GLabel 7130 11800 2    50   Input ~ 0
+laag_2
+Text GLabel 7130 11700 2    50   Input ~ 0
+laag_3
+Text GLabel 7130 11600 2    50   Input ~ 0
+laag_4
+Text GLabel 7130 11500 2    50   Input ~ 0
+laag_5
+Text GLabel 7130 11400 2    50   Input ~ 0
+laag_6
+Text GLabel 7130 11300 2    50   Input ~ 0
+laag_7
+Text GLabel 7130 11200 2    50   Input ~ 0
+laag_8
+Text GLabel 7130 11100 2    50   Input ~ 0
+laag_9
+Text GLabel 7130 11000 2    50   Input ~ 0
+laag_10
+Text GLabel 7130 10900 2    50   Input ~ 0
+laag_11
+Text GLabel 7130 10800 2    50   Input ~ 0
+laag_12
+NoConn ~ 8650 9180
+NoConn ~ 8650 9280
+NoConn ~ 8650 9380
+NoConn ~ 8650 9480
+NoConn ~ 8650 9580
+NoConn ~ 8650 9680
+NoConn ~ 8650 9780
+NoConn ~ 8650 9880
+NoConn ~ 8650 9980
+NoConn ~ 8650 10080
+NoConn ~ 8650 10180
+NoConn ~ 8650 10280
+NoConn ~ 6380 10800
+NoConn ~ 6380 10900
+NoConn ~ 6380 11000
+NoConn ~ 6380 11100
+NoConn ~ 6380 11200
+NoConn ~ 6380 11300
+NoConn ~ 6380 11400
+NoConn ~ 6380 11500
+NoConn ~ 6380 11900
+NoConn ~ 6380 11800
+NoConn ~ 6380 11700
+NoConn ~ 6380 11600
 $EndSCHEMATC
