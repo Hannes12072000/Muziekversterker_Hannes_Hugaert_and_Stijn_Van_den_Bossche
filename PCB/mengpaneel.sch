@@ -18,38 +18,38 @@ Text GLabel 19160 9780 0    50   Input ~ 0
 RX_UART
 Text GLabel 19160 9880 0    50   Input ~ 0
 TX_UART
-Connection ~ 17650 12160
+Connection ~ 18090 10670
 Wire Wire Line
-	17650 12290 17650 12160
+	18090 10800 18090 10670
 Wire Wire Line
-	17650 11830 17650 12160
-Connection ~ 17650 11830
+	18090 10340 18090 10670
+Connection ~ 18090 10340
 Wire Wire Line
-	17650 11490 17650 11830
+	18090 10000 18090 10340
 Wire Wire Line
-	17650 12160 17450 12160
+	18090 10670 17890 10670
 $Comp
 L Switch:SW_DPST_x2 SW3
 U 2 1 8F2CC16C
-P 17250 11830
-F 0 "SW3" H 17250 12065 50  0000 C CNN
-F 1 "SW_DPST_x2" H 17250 11974 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 17250 11830 50  0001 C CNN
-F 3 "~" H 17250 11830 50  0001 C CNN
-	2    17250 11830
+P 17690 10340
+F 0 "SW3" H 17690 10575 50  0000 C CNN
+F 1 "SW_DPST_x2" H 17690 10484 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 17690 10340 50  0001 C CNN
+F 3 "~" H 17690 10340 50  0001 C CNN
+	2    17690 10340
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	17650 11830 17450 11830
+	18090 10340 17890 10340
 $Comp
 L Switch:SW_DPST_x2 SW3
 U 1 1 603E27EC
-P 17250 11490
-F 0 "SW3" H 17250 11725 50  0000 C CNN
-F 1 "SW_DPST_x2" H 17250 11634 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 17250 11490 50  0001 C CNN
-F 3 "~" H 17250 11490 50  0001 C CNN
-	1    17250 11490
+P 17690 10000
+F 0 "SW3" H 17690 10235 50  0000 C CNN
+F 1 "SW_DPST_x2" H 17690 10144 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 17690 10000 50  0001 C CNN
+F 3 "~" H 17690 10000 50  0001 C CNN
+	1    17690 10000
 	-1   0    0    -1  
 $EndComp
 Text GLabel 19160 9980 0    50   Input ~ 0
@@ -469,7 +469,7 @@ Text GLabel 2990 4150 0    50   Input ~ 0
 laag_12
 Text GLabel 4770 5400 2    50   Input ~ 0
 slider_2
-Text GLabel 4790 7100 2    50   Input ~ 0
+Text GLabel 4780 7090 2    50   Input ~ 0
 slider_3
 Text GLabel 8240 7090 2    50   Input ~ 0
 slider_8
@@ -3428,33 +3428,33 @@ Text GLabel 15090 4900 2    50   Input ~ 0
 laag_1
 NoConn ~ 13790 6600
 NoConn ~ 13690 6600
-Connection ~ 17650 11490
+Connection ~ 18090 10000
 $Comp
 L power:GND #PWR0198
 U 1 1 6059BB6E
-P 17650 12290
-F 0 "#PWR0198" H 17650 12040 50  0001 C CNN
-F 1 "GND" H 17655 12117 50  0000 C CNN
-F 2 "" H 17650 12290 50  0001 C CNN
-F 3 "" H 17650 12290 50  0001 C CNN
-	1    17650 12290
+P 18090 10800
+F 0 "#PWR0198" H 18090 10550 50  0001 C CNN
+F 1 "GND" H 18095 10627 50  0000 C CNN
+F 2 "" H 18090 10800 50  0001 C CNN
+F 3 "" H 18090 10800 50  0001 C CNN
+	1    18090 10800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	17650 11490 17450 11490
+	18090 10000 17890 10000
 Wire Wire Line
-	17650 11070 17650 11490
+	18090 9580 18090 10000
 Wire Wire Line
-	17450 11070 17650 11070
+	17890 9580 18090 9580
 $Comp
 L Switch:SW_DPDT_x2 SW2
 U 1 1 603E0750
-P 17250 11070
-F 0 "SW2" H 17250 11355 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 17250 11264 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x06_P1.00mm_Vertical" H 17250 11070 50  0001 C CNN
-F 3 "~" H 17250 11070 50  0001 C CNN
-	1    17250 11070
+P 17690 9580
+F 0 "SW2" H 17690 9865 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 17690 9774 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x06_P1.00mm_Vertical" H 17690 9580 50  0001 C CNN
+F 3 "~" H 17690 9580 50  0001 C CNN
+	1    17690 9580
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -6631,35 +6631,9 @@ F 3 "~" H 20770 13130 50  0001 C CNN
 	1    20770 13130
 	1    0    0    -1  
 $EndComp
-$Comp
-L mengpaneel-rescue:STM32F411CEU7-STM32F411CEU7 IC10
-U 1 1 60AC800D
-P 14880 9280
-F 0 "IC10" H 14660 9760 50  0000 L CNN
-F 1 "STM32F411CEU7" H 14430 9700 50  0000 L TNN
-F 2 "STM32F411CEU7:QFN50P700X700X65-49N-D" H 16530 9780 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/2/STM32F411CEU7.pdf" H 16530 9680 50  0001 L CNN
-F 4 "STMICROELECTRONICS - STM32F411CEU7 - MCU, 32BIT, CORTEX-M4, 100MHZ, UFQFPN-48" H 16530 9580 50  0001 L CNN "Description"
-F 5 "0.65" H 16530 9480 50  0001 L CNN "Height"
-F 6 "511-STM32F411CEU7" H 16530 9380 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STM32F411CEU7/?qs=k5OWtXsTJaprF2FuhgNRlw%3D%3D" H 16530 9280 50  0001 L CNN "Mouser Price/Stock"
-F 8 "STMicroelectronics" H 16530 9180 50  0001 L CNN "Manufacturer_Name"
-F 9 "STM32F411CEU7" H 16530 9080 50  0001 L CNN "Manufacturer_Part_Number"
-	1    14880 9280
-	1    0    0    -1  
-$EndComp
-NoConn ~ 15880 11080
-NoConn ~ 16680 10180
-NoConn ~ 16680 10280
 NoConn ~ 16680 10380
 NoConn ~ 15480 8580
 NoConn ~ 15580 8580
-NoConn ~ 15980 8580
-NoConn ~ 16180 8580
-NoConn ~ 16280 8580
-NoConn ~ 16680 9480
-NoConn ~ 16680 9580
-NoConn ~ 16680 9680
 NoConn ~ 14880 9480
 NoConn ~ 14880 9580
 NoConn ~ 14880 9380
@@ -6812,12 +6786,12 @@ SPI2_SCK
 $Comp
 L Switch:SW_DPST_x2 SW4
 U 1 1 8F841806
-P 17250 12160
-F 0 "SW4" H 17250 12395 50  0000 C CNN
-F 1 "SW_DPST_x2" H 17250 12304 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 17250 12160 50  0001 C CNN
-F 3 "~" H 17250 12160 50  0001 C CNN
-	1    17250 12160
+P 17690 10670
+F 0 "SW4" H 17690 10905 50  0000 C CNN
+F 1 "SW_DPST_x2" H 17690 10814 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 17690 10670 50  0001 C CNN
+F 3 "~" H 17690 10670 50  0001 C CNN
+	1    17690 10670
 	-1   0    0    -1  
 $EndComp
 Text GLabel 15550 20560 0    50   Input ~ 0
@@ -7143,21 +7117,21 @@ Text GLabel 19160 11790 0    50   Input ~ 0
 I2C_SDA
 Text GLabel 19160 11690 0    50   Input ~ 0
 I2C_SCL
-Text GLabel 14790 11300 0    50   Input ~ 0
+Text GLabel 15980 8580 1    50   Input ~ 0
 CS_POT1
-Text GLabel 14780 11200 0    50   Input ~ 0
+Text GLabel 15880 11080 3    50   Input ~ 0
 cs_leds
-Text GLabel 14790 11000 0    50   Input ~ 0
+Text GLabel 15680 11080 3    50   Input ~ 0
 GPIO_INT
-Text GLabel 14790 11100 0    50   Input ~ 0
+Text GLabel 15780 11080 3    50   Input ~ 0
 SD_Step-Up
-Text GLabel 14790 11400 0    50   Input ~ 0
+Text GLabel 16080 8580 1    50   Input ~ 0
 CS_POT2
-Text GLabel 14790 11500 0    50   Input ~ 0
+Text GLabel 16180 8580 1    50   Input ~ 0
 CS_POT3
-Text GLabel 14790 11600 0    50   Input ~ 0
+Text GLabel 16280 8580 1    50   Input ~ 0
 CS_POT4
-Text GLabel 14790 11700 0    50   Input ~ 0
+Text GLabel 16380 8580 1    50   Input ~ 0
 CS_POT5
 Text GLabel 17970 20540 0    50   Input ~ 0
 SPI1_MOSI
@@ -7439,29 +7413,29 @@ F 3 "" H 6680 11400 50  0001 C CNN
 	1    6680 10900
 	1    0    0    -1  
 $EndComp
-Text GLabel 7130 11900 2    50   Input ~ 0
+Text GLabel 6380 11900 0    50   Input ~ 0
 laag_1
-Text GLabel 7130 11800 2    50   Input ~ 0
+Text GLabel 6380 11800 0    50   Input ~ 0
 laag_2
-Text GLabel 7130 11700 2    50   Input ~ 0
+Text GLabel 6380 11700 0    50   Input ~ 0
 laag_3
-Text GLabel 7130 11600 2    50   Input ~ 0
+Text GLabel 6380 11600 0    50   Input ~ 0
 laag_4
-Text GLabel 7130 11500 2    50   Input ~ 0
+Text GLabel 6380 11500 0    50   Input ~ 0
 laag_5
-Text GLabel 7130 11400 2    50   Input ~ 0
+Text GLabel 6380 11400 0    50   Input ~ 0
 laag_6
-Text GLabel 7130 11300 2    50   Input ~ 0
+Text GLabel 6380 11300 0    50   Input ~ 0
 laag_7
-Text GLabel 7130 11200 2    50   Input ~ 0
+Text GLabel 6380 11200 0    50   Input ~ 0
 laag_8
-Text GLabel 7130 11100 2    50   Input ~ 0
+Text GLabel 6380 11100 0    50   Input ~ 0
 laag_9
-Text GLabel 7130 11000 2    50   Input ~ 0
+Text GLabel 6380 11000 0    50   Input ~ 0
 laag_10
-Text GLabel 7130 10900 2    50   Input ~ 0
+Text GLabel 6380 10900 0    50   Input ~ 0
 laag_11
-Text GLabel 7130 10800 2    50   Input ~ 0
+Text GLabel 6380 10800 0    50   Input ~ 0
 laag_12
 NoConn ~ 8650 9180
 NoConn ~ 8650 9280
@@ -7475,16 +7449,67 @@ NoConn ~ 8650 9980
 NoConn ~ 8650 10080
 NoConn ~ 8650 10180
 NoConn ~ 8650 10280
-NoConn ~ 6380 10800
-NoConn ~ 6380 10900
-NoConn ~ 6380 11000
-NoConn ~ 6380 11100
-NoConn ~ 6380 11200
-NoConn ~ 6380 11300
-NoConn ~ 6380 11400
-NoConn ~ 6380 11500
-NoConn ~ 6380 11900
-NoConn ~ 6380 11800
-NoConn ~ 6380 11700
-NoConn ~ 6380 11600
+Text GLabel 16680 9980 2    50   Input ~ 0
+UART_CLK
+NoConn ~ 15480 11080
+NoConn ~ 15280 11080
+NoConn ~ 15180 11080
+NoConn ~ 14880 10180
+NoConn ~ 14880 10280
+NoConn ~ 14880 10380
+$Comp
+L mengpaneel-rescue:STM32F411CEU7-STM32F411CEU7 IC10
+U 1 1 60AC800D
+P 14880 9280
+F 0 "IC10" H 14660 9760 50  0000 L CNN
+F 1 "STM32F411CEU7" H 14430 9700 50  0000 L TNN
+F 2 "STM32F411CEU7:QFN50P700X700X65-49N-D" H 16530 9780 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/2/STM32F411CEU7.pdf" H 16530 9680 50  0001 L CNN
+F 4 "STMICROELECTRONICS - STM32F411CEU7 - MCU, 32BIT, CORTEX-M4, 100MHZ, UFQFPN-48" H 16530 9580 50  0001 L CNN "Description"
+F 5 "0.65" H 16530 9480 50  0001 L CNN "Height"
+F 6 "511-STM32F411CEU7" H 16530 9380 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STM32F411CEU7/?qs=k5OWtXsTJaprF2FuhgNRlw%3D%3D" H 16530 9280 50  0001 L CNN "Mouser Price/Stock"
+F 8 "STMicroelectronics" H 16530 9180 50  0001 L CNN "Manufacturer_Name"
+F 9 "STM32F411CEU7" H 16530 9080 50  0001 L CNN "Manufacturer_Part_Number"
+	1    14880 9280
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16680 9480 17490 9480
+Wire Wire Line
+	17490 9680 17430 9680
+Wire Wire Line
+	17430 9680 17430 9580
+Wire Wire Line
+	17430 9580 16680 9580
+Wire Wire Line
+	16680 9680 17380 9680
+Wire Wire Line
+	17380 9680 17380 10000
+Wire Wire Line
+	17380 10000 17490 10000
+Wire Wire Line
+	16680 10180 17370 10180
+Wire Wire Line
+	17370 10180 17370 10340
+Wire Wire Line
+	17370 10340 17490 10340
+Wire Wire Line
+	16680 10280 17320 10280
+Wire Wire Line
+	17320 10280 17320 10670
+Wire Wire Line
+	17320 10670 17490 10670
+NoConn ~ 7130 11500
+NoConn ~ 7130 11600
+NoConn ~ 7130 11700
+NoConn ~ 7130 11800
+NoConn ~ 7130 11900
+NoConn ~ 7130 11400
+NoConn ~ 7130 11300
+NoConn ~ 7130 11200
+NoConn ~ 7130 11100
+NoConn ~ 7130 10800
+NoConn ~ 7130 10900
+NoConn ~ 7130 11000
 $EndSCHEMATC
