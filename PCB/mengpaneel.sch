@@ -425,24 +425,24 @@ Text GLabel 9140 13280 2    50   Input ~ 0
 LEDlaag_11
 Text GLabel 9140 12780 2    50   Input ~ 0
 LEDlaag_12
-Text Notes 3670 6250 0    50   ~ 0
-BASS
-Text Notes 9210 6280 0    50   ~ 0
-BASS
-Text Notes 9240 7950 0    50   ~ 0
-MEDIUM
-Text Notes 9240 9600 0    50   ~ 0
-TREBLE
-Text Notes 3500 7960 0    50   ~ 0
-MEDIUM
-Text Notes 3450 9620 0    50   ~ 0
-TREBLE
-Text Notes 4640 3840 0    50   ~ 0
-Line 1 IN
-Text Notes 8050 3800 0    50   ~ 0
+Text Notes 3170 3820 0    50   ~ 0
+BASS LIN1
+Text Notes 9240 6280 0    50   ~ 0
+BASS LIN2
+Text Notes 3210 8140 0    50   ~ 0
+MEDIUM LIN2
+Text Notes 9200 8110 0    50   ~ 0
+TREBLE LIN2
+Text Notes 4540 3820 0    50   ~ 0
+MEDIUM LIN1
+Text Notes 7980 3800 0    50   ~ 0
+TREBLE LIN1
+Text Notes 9500 3810 0    50   ~ 0
+LIN1 IN
+Text Notes 3390 6400 0    50   ~ 0
 Line 2 IN
-Text Notes 9610 3810 0    50   ~ 0
-OUT 
+Text Notes 9170 9740 0    50   ~ 0
+MASTER OUT 
 Text GLabel 2990 5250 0    50   Input ~ 0
 laag_1
 Text GLabel 2990 5150 0    50   Input ~ 0
@@ -6720,8 +6720,8 @@ F 3 "" H 3290 4750 50  0001 C CNN
 $EndComp
 Text GLabel 3340 5400 2    50   Input ~ 0
 slider_1
-Text Notes 3160 3820 0    50   ~ 0
-MICROFOON
+Text Notes 2980 9770 0    50   ~ 0
+MICROFOON VOLUME
 Wire Wire Line
 	3740 4150 4420 4150
 Wire Wire Line
@@ -7551,4 +7551,36 @@ Wire Wire Line
 Connection ~ 18010 17940
 Wire Wire Line
 	16840 17420 16840 17840
+Wire Notes Line
+	14570 14260 14570 13230
+Wire Notes Line
+	14670 14260 14670 14180
+Wire Notes Line
+	14670 14180 14780 14180
+Wire Notes Line
+	14780 14180 14780 14120
+Wire Notes Line
+	14890 14120 14890 14050
+Wire Notes Line
+	14570 14260 14670 14260
+Wire Notes Line
+	14780 14120 14890 14120
+Wire Notes Line
+	14890 14050 14940 14050
+Wire Notes Line
+	14560 14260 14490 14260
+Wire Notes Line
+	14490 14260 14490 14180
+Wire Notes Line
+	14490 14180 14400 14180
+Wire Notes Line
+	14400 14180 14400 14080
+Wire Notes Line
+	14400 14080 14310 14080
+Wire Notes Line
+	14310 14080 14310 13990
+Wire Notes Line
+	14310 13990 14210 13990
+Text Notes 14190 13100 0    50   ~ 0
+Verhoog de stroom er van.\n
 $EndSCHEMATC
