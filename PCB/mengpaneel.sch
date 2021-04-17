@@ -14,10 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 19160 9780 0    50   Input ~ 0
-RX_UART
-Text GLabel 19160 9880 0    50   Input ~ 0
-TX_UART
 Connection ~ 18090 10670
 Wire Wire Line
 	18090 10800 18090 10670
@@ -52,8 +48,6 @@ F 3 "~" H 17690 10000 50  0001 C CNN
 	1    17690 10000
 	-1   0    0    -1  
 $EndComp
-Text GLabel 19160 9980 0    50   Input ~ 0
-UART_CLK
 Text GLabel 15580 11080 3    50   Input ~ 0
 SPI1_MOSI
 Text GLabel 16680 10080 2    50   Input ~ 0
@@ -62,10 +56,6 @@ Text GLabel 15780 8580 1    50   Input ~ 0
 I2C_SDA
 Text GLabel 15880 8580 1    50   Input ~ 0
 I2C_SCL
-Text GLabel 16680 9780 2    50   Input ~ 0
-RX_UART
-Text GLabel 16680 9880 2    50   Input ~ 0
-TX_UART
 Text GLabel 10800 17890 0    50   Input ~ 0
 cs_leds
 Connection ~ 10880 17890
@@ -3447,22 +3437,11 @@ Wire Wire Line
 Wire Wire Line
 	17890 9580 18090 9580
 $Comp
-L Switch:SW_DPDT_x2 SW2
-U 1 1 603E0750
-P 17690 9580
-F 0 "SW2" H 17690 9865 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 17690 9774 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x06_P1.00mm_Vertical" H 17690 9580 50  0001 C CNN
-F 3 "~" H 17690 9580 50  0001 C CNN
-	1    17690 9580
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:R R58
 U 1 1 611EAB78
 P 15680 8250
-F 0 "R58" V 15473 8250 50  0000 C CNN
-F 1 "100K" V 15564 8250 50  0000 C CNN
+F 0 "R58" V 15490 8120 50  0000 C CNN
+F 1 "100K" V 15570 8110 50  0000 C CNN
 F 2 "ERJ-UP3D1003V:RESC1608X55N" V 15610 8250 50  0001 C CNN
 F 3 "~" H 15680 8250 50  0001 C CNN
 	1    15680 8250
@@ -5186,17 +5165,6 @@ Connection ~ 14170 9780
 Text GLabel 13040 14850 0    50   Input ~ 0
 5V
 $Comp
-L Device:L L1
-U 1 1 66E2ECA6
-P 13500 14850
-F 0 "L1" V 13690 14850 50  0000 C CNN
-F 1 "6.8µ" V 13599 14850 50  0000 C CNN
-F 2 "SRP0512-6R8K:SRP05126R8K" H 13500 14850 50  0001 C CNN
-F 3 "~" H 13500 14850 50  0001 C CNN
-	1    13500 14850
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:C C38
 U 1 1 695833DE
 P 13150 15200
@@ -5205,28 +5173,6 @@ F 1 "4.7µ" H 13265 15155 50  0000 L CNN
 F 2 "JMK212B7475KGHT:CAPC2114X145N" H 13188 15050 50  0001 C CNN
 F 3 "~" H 13150 15200 50  0001 C CNN
 	1    13150 15200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C44
-U 1 1 69588931
-P 15960 15720
-F 0 "C44" H 16075 15766 50  0000 L CNN
-F 1 "10p" H 16075 15675 50  0000 L CNN
-F 2 "C1206C100K5RACTU:CAPC3216X88N" H 15998 15570 50  0001 C CNN
-F 3 "https://connect.kemet.com:7667/gateway/IntelliData-ComponentDocumentation/1.0/download/specsheet/C1206C100K5RACTU" H 15960 15720 50  0001 C CNN
-	1    15960 15720
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C40
-U 1 1 69588937
-P 13440 15510
-F 0 "C40" H 13555 15556 50  0000 L CNN
-F 1 "4.7µ" H 13555 15465 50  0000 L CNN
-F 2 "JMK212B7475KGHT:CAPC2114X145N" H 13478 15360 50  0001 C CNN
-F 3 "~" H 13440 15510 50  0001 C CNN
-	1    13440 15510
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -5241,26 +5187,15 @@ F 3 "~" H 15540 14850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C41
-U 1 1 69736762
-P 15590 15940
-F 0 "C41" H 15705 15986 50  0000 L CNN
-F 1 "390p" H 15705 15895 50  0000 L CNN
-F 2 "C0603C391J1HACTU:CAPC1608X87N" H 15628 15790 50  0001 C CNN
-F 3 "~" H 15590 15940 50  0001 C CNN
-	1    15590 15940
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R85
 U 1 1 69A9A23C
-P 13780 15520
-F 0 "R85" H 13850 15566 50  0000 L CNN
-F 1 "57.6k" H 13850 15475 50  0000 L CNN
-F 2 "CR0603-FX-5762ELF:RESC1608X55N" V 13710 15520 50  0001 C CNN
-F 3 "~" H 13780 15520 50  0001 C CNN
-	1    13780 15520
-	1    0    0    -1  
+P 13440 15510
+F 0 "R85" H 13510 15556 50  0000 L CNN
+F 1 "57.6k" H 13510 15465 50  0000 L CNN
+F 2 "CR0603-FX-5762ELF:RESC1608X55N" V 13370 15510 50  0001 C CNN
+F 3 "~" H 13440 15510 50  0001 C CNN
+	1    13440 15510
+	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0109
@@ -5284,7 +5219,7 @@ L Device:C C72
 U 1 1 732690A9
 P 17420 15170
 F 0 "C72" H 17535 15216 50  0000 L CNN
-F 1 "0,1µ" H 17535 15125 50  0000 L CNN
+F 1 "0.1µ" H 17535 15125 50  0000 L CNN
 F 2 "0603YC104J4T4A:CAPC1608X90N" H 17458 15020 50  0001 C CNN
 F 3 "~" H 17420 15170 50  0001 C CNN
 	1    17420 15170
@@ -5301,52 +5236,8 @@ F 3 "~" H 17420 15630 50  0001 C CNN
 	1    17420 15630
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R87
-U 1 1 69A8FD73
-P 16320 15050
-F 0 "R87" H 16390 15096 50  0000 L CNN
-F 1 "1.02M" H 16390 15005 50  0000 L CNN
-F 2 "CRCW06031M02FKEA:RESC1608X50N" V 16250 15050 50  0001 C CNN
-F 3 "~" H 16320 15050 50  0001 C CNN
-	1    16320 15050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R88
-U 1 1 69A94C83
-P 16320 15450
-F 0 "R88" H 16390 15496 50  0000 L CNN
-F 1 "113k" H 16390 15405 50  0000 L CNN
-F 2 "CR0805-FX-1133ELF:RESC2012X60N" V 16250 15450 50  0001 C CNN
-F 3 "~" H 16320 15450 50  0001 C CNN
-	1    16320 15450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	16320 15200 16320 15250
-$Comp
-L Device:C C71
-U 1 1 698E47AF
-P 16860 15170
-F 0 "C71" H 16975 15216 50  0000 L CNN
-F 1 "22µ" H 16975 15125 50  0000 L CNN
-F 2 "C0805C226K7PACTU:CAPC2012X140N" H 16898 15020 50  0001 C CNN
-F 3 "~" H 16860 15170 50  0001 C CNN
-	1    16860 15170
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R86
-U 1 1 69A9A242
-P 15590 15570
-F 0 "R86" H 15660 15616 50  0000 L CNN
-F 1 "210k" H 15660 15525 50  0000 L CNN
-F 2 "RQ73C2A210KBTDF:RESC2012X65N" V 15520 15570 50  0001 C CNN
-F 3 "~" H 15590 15570 50  0001 C CNN
-	1    15590 15570
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	17420 15020 17420 14850
 Wire Wire Line
@@ -5355,23 +5246,6 @@ Wire Wire Line
 	17420 15780 17420 15890
 Wire Wire Line
 	17420 15890 17790 15890
-$Comp
-L mengpaneel-rescue:LTC3121EDE#PBF-LTC3121EDE#PBF IC4
-U 1 1 6094A552
-P 13880 14850
-F 0 "IC4" H 14580 15115 50  0000 C CNN
-F 1 "LTC3121EDE#PBF" H 14580 15024 50  0000 C CNN
-F 2 "LTC3121EDE#PBF:SON50P300X400X80-13N-D" H 15130 14950 50  0001 L CNN
-F 3 "http://www.linear.com/docs/46926" H 15130 14850 50  0001 L CNN
-F 4 "Switching Voltage Regulators 15V, 1.5A Synchronous Step-Up DC/DC Converter with Output Disconnect" H 15130 14750 50  0001 L CNN "Description"
-F 5 "0.8" H 15130 14650 50  0001 L CNN "Height"
-F 6 "584-LTC3121EDE#PBF" H 15130 14550 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Analog-Devices/LTC3121EDEPBF?qs=oahfZPh6IAKQaqRaQFQxpg%3D%3D" H 15130 14450 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Analog Devices" H 15130 14350 50  0001 L CNN "Manufacturer_Name"
-F 9 "LTC3121EDE#PBF" H 15130 14250 50  0001 L CNN "Manufacturer_Part_Number"
-	1    13880 14850
-	1    0    0    -1  
-$EndComp
 $Comp
 L mengpaneel-rescue:SJ-63053A-SJ-63053A J4
 U 1 1 60ABE1CD
@@ -5388,23 +5262,6 @@ F 8 "CUI Inc." H 19460 5470 50  0001 L CNN "Manufacturer_Name"
 F 9 "SJ-63053A" H 19460 5370 50  0001 L CNN "Manufacturer_Part_Number"
 	1    18810 5970
 	1    0    0    1   
-$EndComp
-$Comp
-L mengpaneel-rescue:UJ2-MIBH-G-SMT-TR-UJ2-MIBH-G-SMT-TR J1
-U 1 1 60AC3437
-P 11380 12980
-F 0 "J1" H 11830 13245 50  0000 C CNN
-F 1 "UJ2-MIBH-G-SMT-TR" H 11830 13154 50  0000 C CNN
-F 2 "UJ2-MIBH-G-SMT-TR:UJ2MIBHGSMTTR" H 12130 13080 50  0001 L CNN
-F 3 "" H 12130 12980 50  0001 L CNN
-F 4 "USB Connectors" H 12130 12880 50  0001 L CNN "Description"
-F 5 "3.15" H 12130 12780 50  0001 L CNN "Height"
-F 6 "490-UJ2-MIBH-G-SMTTR" H 12130 12680 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/UJ2-MIBH-G-SMT-TR/?qs=IS%252B4QmGtzzpvS1XQusp0iA%3D%3D" H 12130 12580 50  0001 L CNN "Mouser Price/Stock"
-F 8 "CUI Inc." H 12130 12480 50  0001 L CNN "Manufacturer_Name"
-F 9 "UJ2-MIBH-G-SMT-TR" H 12130 12380 50  0001 L CNN "Manufacturer_Part_Number"
-	1    11380 12980
-	1    0    0    -1  
 $EndComp
 $Comp
 L mengpaneel-rescue:AD5204BRUZ10-REEL7-AD5204BRUZ10-REEL7 IC5
@@ -5445,17 +5302,6 @@ F 3 "" H 13880 14950 50  0001 C CNN
 	1    13880 14950
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GND #PWR0110
-U 1 1 62BDCB8F
-P 13880 15150
-F 0 "#PWR0110" H 13880 14900 50  0001 C CNN
-F 1 "GND" H 13885 14977 50  0000 C CNN
-F 2 "" H 13880 15150 50  0001 C CNN
-F 3 "" H 13880 15150 50  0001 C CNN
-	1    13880 15150
-	0    1    1    0   
-$EndComp
 Text GLabel 15280 15150 2    50   Input ~ 0
 SD_Step-Up
 Wire Wire Line
@@ -5465,9 +5311,6 @@ Wire Wire Line
 Connection ~ 16320 15250
 Wire Wire Line
 	16320 15250 16320 15300
-Connection ~ 15590 16090
-Wire Wire Line
-	15590 16090 15960 16090
 Wire Wire Line
 	15280 15350 15590 15350
 Wire Wire Line
@@ -5484,26 +5327,14 @@ Wire Wire Line
 Wire Wire Line
 	15840 14850 15840 14950
 Connection ~ 16320 14850
-Wire Wire Line
-	14580 16050 14580 16090
 Connection ~ 14580 16090
-Wire Wire Line
-	14580 16090 15590 16090
 Connection ~ 13150 15050
-Wire Wire Line
-	13780 15370 13780 15350
-Wire Wire Line
-	13780 15350 13880 15350
-Wire Wire Line
-	13880 15250 13440 15250
-Wire Wire Line
-	13440 15250 13440 15360
 Wire Wire Line
 	13780 15670 13780 16090
 Wire Wire Line
 	13780 16090 14580 16090
 Wire Wire Line
-	13150 15350 13150 16090
+	13150 15350 13150 15380
 Wire Wire Line
 	13150 16090 13440 16090
 Connection ~ 13780 16090
@@ -5722,9 +5553,6 @@ F 3 "" H 12420 13280 50  0001 C CNN
 	1    12420 13280
 	0    -1   1    0   
 $EndComp
-NoConn ~ 12280 13180
-NoConn ~ 12280 13080
-NoConn ~ 12280 13380
 Text GLabel 12280 12980 2    50   Input ~ 0
 5V
 Wire Wire Line
@@ -6707,17 +6535,6 @@ F 3 "" H 8200 9780 50  0001 C CNN
 	1    8200 9280
 	1    0    0    -1  
 $EndComp
-$Comp
-L touchpad_mengpaneel_library:Touchpad_mp U6
-U 1 1 6111A5AB
-P 3290 4250
-F 0 "U6" H 3365 4615 50  0000 C CNN
-F 1 "Touchpad_mp" H 3365 4524 50  0000 C CNN
-F 2 "schema_tp:touchpad_footprint_normaal" H 3290 4750 50  0001 C CNN
-F 3 "" H 3290 4750 50  0001 C CNN
-	1    3290 4250
-	1    0    0    -1  
-$EndComp
 Text GLabel 3340 5400 2    50   Input ~ 0
 slider_1
 Text Notes 2980 9770 0    50   ~ 0
@@ -7049,44 +6866,33 @@ Text GLabel 4440 9280 0    50   Input ~ 0
 laag3_11
 Text GLabel 4440 9180 0    50   Input ~ 0
 laag3_12
-$Comp
-L Connector:Screw_Terminal_01x03 J2
-U 1 1 729C4271
-P 19360 9880
-F 0 "J2" H 19440 9922 50  0000 L CNN
-F 1 "Screw_Terminal_01x03" H 19440 9831 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical" H 19360 9880 50  0001 C CNN
-F 3 "~" H 19360 9880 50  0001 C CNN
-	1    19360 9880
-	1    0    0    -1  
-$EndComp
-Text GLabel 19160 10790 0    50   Input ~ 0
+Text GLabel 19660 10190 0    50   Input ~ 0
 CS_POT1
-Text GLabel 19160 10690 0    50   Input ~ 0
+Text GLabel 19660 10090 0    50   Input ~ 0
 cs_leds
-Text GLabel 19160 10490 0    50   Input ~ 0
+Text GLabel 19660 9890 0    50   Input ~ 0
 GPIO_INT
-Text GLabel 19160 10590 0    50   Input ~ 0
+Text GLabel 19660 9990 0    50   Input ~ 0
 SD_Step-Up
-Text GLabel 19160 10890 0    50   Input ~ 0
+Text GLabel 19660 10290 0    50   Input ~ 0
 CS_POT2
-Text GLabel 19160 10990 0    50   Input ~ 0
+Text GLabel 19660 10390 0    50   Input ~ 0
 CS_POT3
-Text GLabel 19160 11090 0    50   Input ~ 0
+Text GLabel 19660 10490 0    50   Input ~ 0
 CS_POT4
-Text GLabel 19160 11190 0    50   Input ~ 0
+Text GLabel 19660 10590 0    50   Input ~ 0
 CS_POT5
-Text GLabel 19160 11490 0    50   Input ~ 0
+Text GLabel 19660 10890 0    50   Input ~ 0
 SPI2_MOSI
-Text GLabel 19160 11290 0    50   Input ~ 0
+Text GLabel 19660 10690 0    50   Input ~ 0
 SPI1_MOSI
-Text GLabel 19160 11390 0    50   Input ~ 0
+Text GLabel 19660 10790 0    50   Input ~ 0
 SPI1_SCK
-Text GLabel 19160 11590 0    50   Input ~ 0
+Text GLabel 19660 10990 0    50   Input ~ 0
 SPI2_SCK
-Text GLabel 19160 11790 0    50   Input ~ 0
+Text GLabel 19660 11190 0    50   Input ~ 0
 I2C_SDA
-Text GLabel 19160 11690 0    50   Input ~ 0
+Text GLabel 19660 11090 0    50   Input ~ 0
 I2C_SCL
 Text GLabel 15980 8580 1    50   Input ~ 0
 CS_POT1
@@ -7119,12 +6925,12 @@ NoConn ~ 20400 20760
 $Comp
 L Connector:Screw_Terminal_01x14 J3
 U 1 1 773C6EF8
-P 19360 11090
-F 0 "J3" H 19440 11082 50  0000 L CNN
-F 1 "Screw_Terminal_01x14" H 19440 10991 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x14_P1.00mm_Vertical" H 19360 11090 50  0001 C CNN
-F 3 "~" H 19360 11090 50  0001 C CNN
-	1    19360 11090
+P 19860 10490
+F 0 "J3" H 19940 10482 50  0000 L CNN
+F 1 "Screw_Terminal_01x14" H 19940 10391 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x14_P1.00mm_Vertical" H 19860 10490 50  0001 C CNN
+F 3 "~" H 19860 10490 50  0001 C CNN
+	1    19860 10490
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -7420,8 +7226,6 @@ NoConn ~ 8650 9980
 NoConn ~ 8650 10080
 NoConn ~ 8650 10180
 NoConn ~ 8650 10280
-Text GLabel 16680 9980 2    50   Input ~ 0
-UART_CLK
 NoConn ~ 15480 11080
 NoConn ~ 15280 11080
 NoConn ~ 15180 11080
@@ -7446,20 +7250,6 @@ F 9 "STM32F411CEU7" H 16530 9080 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	16680 9480 17490 9480
-Wire Wire Line
-	17490 9680 17430 9680
-Wire Wire Line
-	17430 9680 17430 9580
-Wire Wire Line
-	17430 9580 16680 9580
-Wire Wire Line
-	16680 9680 17380 9680
-Wire Wire Line
-	17380 9680 17380 10000
-Wire Wire Line
-	17380 10000 17490 10000
-Wire Wire Line
 	16680 10180 17370 10180
 Wire Wire Line
 	17370 10180 17370 10340
@@ -7483,37 +7273,7 @@ NoConn ~ 7130 11100
 NoConn ~ 7130 10800
 NoConn ~ 7130 10900
 NoConn ~ 7130 11000
-Wire Notes Line
-	18690 18270 19720 18270
-Wire Notes Line
-	18690 18370 18770 18370
-Wire Notes Line
-	18770 18370 18770 18480
-Wire Notes Line
-	18770 18480 18830 18480
-Wire Notes Line
-	18830 18590 18900 18590
-Wire Notes Line
-	18690 18270 18690 18370
-Wire Notes Line
-	18830 18480 18830 18590
-Wire Notes Line
-	18900 18590 18900 18640
-Wire Notes Line
-	18690 18260 18690 18190
-Wire Notes Line
-	18690 18190 18770 18190
-Wire Notes Line
-	18770 18190 18770 18100
-Wire Notes Line
-	18770 18100 18870 18100
-Wire Notes Line
-	18870 18100 18870 18010
-Wire Notes Line
-	18870 18010 18960 18010
-Wire Notes Line
-	18960 18010 18960 17910
-Text Notes 19830 18290 0    50   ~ 0
+Text Notes 17820 17240 0    50   ~ 0
 Component alleen nog bestellen
 $Comp
 L 173950336:173950336 PS1
@@ -7551,36 +7311,415 @@ Wire Wire Line
 Connection ~ 18010 17940
 Wire Wire Line
 	16840 17420 16840 17840
+$Comp
+L mengpaneel-rescue:UJ2-MIBH-G-SMT-TR-UJ2-MIBH-G-SMT-TR J1
+U 1 1 60AC3437
+P 11380 12980
+F 0 "J1" H 11830 13245 50  0000 C CNN
+F 1 "UJ2-MIBH-G-SMT-TR" H 11830 13154 50  0000 C CNN
+F 2 "UJ2-MIBH-G-SMT-TR:UJ2MIBHGSMTTR" H 12130 13080 50  0001 L CNN
+F 3 "" H 12130 12980 50  0001 L CNN
+F 4 "USB Connectors" H 12130 12880 50  0001 L CNN "Description"
+F 5 "3.15" H 12130 12780 50  0001 L CNN "Height"
+F 6 "490-UJ2-MIBH-G-SMTTR" H 12130 12680 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/UJ2-MIBH-G-SMT-TR/?qs=IS%252B4QmGtzzpvS1XQusp0iA%3D%3D" H 12130 12580 50  0001 L CNN "Mouser Price/Stock"
+F 8 "CUI Inc." H 12130 12480 50  0001 L CNN "Manufacturer_Name"
+F 9 "UJ2-MIBH-G-SMT-TR" H 12130 12380 50  0001 L CNN "Manufacturer_Part_Number"
+	1    11380 12980
+	1    0    0    -1  
+$EndComp
+Text GLabel 16680 9680 2    50   Input ~ 0
+Data-
+Text GLabel 16680 9580 2    50   Input ~ 0
+Data+
+Text GLabel 12280 13380 2    50   Input ~ 0
+Data-
+Text GLabel 12280 13080 2    50   Input ~ 0
+Data+
+$Comp
+L Switch:SW_DPST_x2 SW2
+U 1 1 63DDF925
+P 17690 9580
+F 0 "SW2" H 17690 9815 50  0000 C CNN
+F 1 "SW_DPST_x2" H 17690 9724 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 17690 9580 50  0001 C CNN
+F 3 "~" H 17690 9580 50  0001 C CNN
+	1    17690 9580
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	16680 9980 17360 9980
+Wire Wire Line
+	17360 9980 17360 10000
+Wire Wire Line
+	17360 10000 17490 10000
+Wire Wire Line
+	16680 9880 17260 9880
+Wire Wire Line
+	17260 9880 17260 9580
+Wire Wire Line
+	17260 9580 17490 9580
+$Comp
+L Connector:Screw_Terminal_01x12 J18
+U 1 1 645BDD32
+P 11280 7240
+F 0 "J18" H 11360 7232 50  0000 L CNN
+F 1 "Screw_Terminal_01x12" H 11360 7141 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x12_P1.00mm_Vertical" H 11280 7240 50  0001 C CNN
+F 3 "~" H 11280 7240 50  0001 C CNN
+	1    11280 7240
+	1    0    0    -1  
+$EndComp
+Text GLabel 11080 7840 0    50   Input ~ 0
+laag_1
+Text GLabel 11080 7740 0    50   Input ~ 0
+laag_2
+Text GLabel 11080 7640 0    50   Input ~ 0
+laag_3
+Text GLabel 11080 7540 0    50   Input ~ 0
+laag_4
+Text GLabel 11080 7440 0    50   Input ~ 0
+laag_5
+Text GLabel 11080 7340 0    50   Input ~ 0
+laag_6
+Text GLabel 11080 7240 0    50   Input ~ 0
+laag_7
+Text GLabel 11080 7140 0    50   Input ~ 0
+laag_8
+Text GLabel 11080 7040 0    50   Input ~ 0
+laag_9
+Text GLabel 11080 6940 0    50   Input ~ 0
+laag_10
+Text GLabel 11080 6840 0    50   Input ~ 0
+laag_11
+Text GLabel 11080 6740 0    50   Input ~ 0
+laag_12
+$Comp
+L Connector:Screw_Terminal_01x01 J2
+U 1 1 6485CEB9
+P 3140 5400
+F 0 "J2" H 3220 5442 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 3220 5351 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 3140 5400 50  0001 C CNN
+F 3 "~" H 3140 5400 50  0001 C CNN
+	1    3140 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L touchpad_mengpaneel_library:Touchpad_mp U6
+U 1 1 6111A5AB
+P 3290 4250
+F 0 "U6" H 3365 4615 50  0000 C CNN
+F 1 "Touchpad_mp" H 3365 4524 50  0000 C CNN
+F 2 "schema_tp:touchpad_footprint_normaal" H 3290 4750 50  0001 C CNN
+F 3 "" H 3290 4750 50  0001 C CNN
+	1    3290 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J8
+U 1 1 64C3DAB9
+P 4570 5400
+F 0 "J8" H 4650 5442 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 4650 5351 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 4570 5400 50  0001 C CNN
+F 3 "~" H 4570 5400 50  0001 C CNN
+	1    4570 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J13
+U 1 1 64D857CC
+P 8030 5400
+F 0 "J13" H 8110 5442 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 8110 5351 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8030 5400 50  0001 C CNN
+F 3 "~" H 8030 5400 50  0001 C CNN
+	1    8030 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J17
+U 1 1 64ECD732
+P 9460 5400
+F 0 "J17" H 9540 5442 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 9540 5351 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9460 5400 50  0001 C CNN
+F 3 "~" H 9460 5400 50  0001 C CNN
+	1    9460 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J10
+U 1 1 65015A1E
+P 4580 7090
+F 0 "J10" H 4660 7132 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 4660 7041 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 4580 7090 50  0001 C CNN
+F 3 "~" H 4580 7090 50  0001 C CNN
+	1    4580 7090
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J15
+U 1 1 6515FB4F
+P 8040 7090
+F 0 "J15" H 8120 7132 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 8120 7041 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8040 7090 50  0001 C CNN
+F 3 "~" H 8040 7090 50  0001 C CNN
+	1    8040 7090
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J9
+U 1 1 652AC46C
+P 4570 8790
+F 0 "J9" H 4650 8832 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 4650 8741 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 4570 8790 50  0001 C CNN
+F 3 "~" H 4570 8790 50  0001 C CNN
+	1    4570 8790
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J14
+U 1 1 653F45AF
+P 8030 8790
+F 0 "J14" H 8110 8832 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 8110 8741 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8030 8790 50  0001 C CNN
+F 3 "~" H 8030 8790 50  0001 C CNN
+	1    8030 8790
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J16
+U 1 1 6553C5A9
+P 8050 10430
+F 0 "J16" H 8130 10472 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 8130 10381 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8050 10430 50  0001 C CNN
+F 3 "~" H 8050 10430 50  0001 C CNN
+	1    8050 10430
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J11
+U 1 1 6568483A
+P 4590 10430
+F 0 "J11" H 4670 10472 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 4670 10381 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 4590 10430 50  0001 C CNN
+F 3 "~" H 4590 10430 50  0001 C CNN
+	1    4590 10430
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J12
+U 1 1 657CCF67
+P 6530 12050
+F 0 "J12" H 6610 12092 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 6610 12001 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6530 12050 50  0001 C CNN
+F 3 "~" H 6530 12050 50  0001 C CNN
+	1    6530 12050
+	-1   0    0    -1  
+$EndComp
+Text GLabel 16680 9780 2    50   Input ~ 0
+ID
+Text GLabel 12280 13180 2    50   Input ~ 0
+ID
+NoConn ~ 16680 9480
+$Comp
+L Device:C C51
+U 1 1 65E3C431
+P 12920 15200
+F 0 "C51" H 13035 15246 50  0000 L CNN
+F 1 "4.7µ" H 13035 15155 50  0000 L CNN
+F 2 "JMK212B7475KGHT:CAPC2114X145N" H 12958 15050 50  0001 C CNN
+F 3 "~" H 12920 15200 50  0001 C CNN
+	1    12920 15200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14580 16090 15590 16090
+Wire Wire Line
+	13780 15150 13880 15150
+Wire Wire Line
+	13440 15360 13440 15350
+Wire Wire Line
+	13440 15350 13880 15350
+Wire Wire Line
+	14580 16050 14580 16090
+$Comp
+L mengpaneel-rescue:LTC3121EDE#PBF-LTC3121EDE#PBF IC4
+U 1 1 6094A552
+P 13880 14850
+F 0 "IC4" H 14580 15115 50  0000 C CNN
+F 1 "LTC3121EDE#PBF" H 14580 15024 50  0000 C CNN
+F 2 "LTC3121EDE#PBF:SON50P300X400X80-13N-D" H 15130 14950 50  0001 L CNN
+F 3 "http://www.linear.com/docs/46926" H 15130 14850 50  0001 L CNN
+F 4 "Switching Voltage Regulators 15V, 1.5A Synchronous Step-Up DC/DC Converter with Output Disconnect" H 15130 14750 50  0001 L CNN "Description"
+F 5 "0.8" H 15130 14650 50  0001 L CNN "Height"
+F 6 "584-LTC3121EDE#PBF" H 15130 14550 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Analog-Devices/LTC3121EDEPBF?qs=oahfZPh6IAKQaqRaQFQxpg%3D%3D" H 15130 14450 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Analog Devices" H 15130 14350 50  0001 L CNN "Manufacturer_Name"
+F 9 "LTC3121EDE#PBF" H 15130 14250 50  0001 L CNN "Manufacturer_Part_Number"
+	1    13880 14850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C40
+U 1 1 69588937
+P 13780 15520
+F 0 "C40" H 13895 15566 50  0000 L CNN
+F 1 "4.7µ" H 13895 15475 50  0000 L CNN
+F 2 "JMK212B7475KGHT:CAPC2114X145N" H 13818 15370 50  0001 C CNN
+F 3 "~" H 13780 15520 50  0001 C CNN
+	1    13780 15520
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13780 15370 13780 15250
+Wire Wire Line
+	13780 15250 13880 15250
+Wire Wire Line
+	13780 15150 13780 15250
+Connection ~ 13780 15250
 Wire Notes Line
-	14570 14260 14570 13230
+	12590 15430 12590 14970
 Wire Notes Line
-	14670 14260 14670 14180
+	12590 14970 13070 14970
 Wire Notes Line
-	14670 14180 14780 14180
+	13070 14970 13070 15430
 Wire Notes Line
-	14780 14180 14780 14120
+	12590 15430 13070 15430
+Wire Wire Line
+	12920 15350 12920 15380
+Wire Wire Line
+	12920 15380 13150 15380
+Connection ~ 13150 15380
+Wire Wire Line
+	13150 15380 13150 16090
+Wire Wire Line
+	12920 15050 13150 15050
+$Comp
+L Device:L L3
+U 1 1 680C28C9
+P 13500 14850
+F 0 "L3" V 13690 14850 50  0000 C CNN
+F 1 "3.3µ" V 13599 14850 50  0000 C CNN
+F 2 "SPM6530T-3R3M:INDPM7165X315N" H 13500 14850 50  0001 C CNN
+F 3 "~" H 13500 14850 50  0001 C CNN
+	1    13500 14850
+	0    -1   -1   0   
+$EndComp
 Wire Notes Line
-	14890 14120 14890 14050
+	13380 14910 13660 14910
 Wire Notes Line
-	14570 14260 14670 14260
+	13660 14910 13660 14610
 Wire Notes Line
-	14780 14120 14890 14120
+	13660 14610 13360 14610
 Wire Notes Line
-	14890 14050 14940 14050
+	13360 14610 13360 14910
 Wire Notes Line
-	14560 14260 14490 14260
+	13360 14910 13370 14910
 Wire Notes Line
-	14490 14260 14490 14180
+	17140 18150 17830 18150
 Wire Notes Line
-	14490 14180 14400 14180
+	17830 18150 17830 17530
 Wire Notes Line
-	14400 14180 14400 14080
+	17830 17530 17140 17530
 Wire Notes Line
-	14400 14080 14310 14080
+	17140 17530 17140 18150
+$Comp
+L Device:R R57
+U 1 1 68B0EBA9
+P 15590 15570
+F 0 "R57" H 15660 15616 50  0000 L CNN
+F 1 "43.2k" H 15660 15525 50  0000 L CNN
+F 2 "CR0805-FX-4322ELF:RESC2012X60N" V 15520 15570 50  0001 C CNN
+F 3 "~" H 15590 15570 50  0001 C CNN
+	1    15590 15570
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R61
+U 1 1 68C59173
+P 16320 15050
+F 0 "R61" H 16390 15096 50  0000 L CNN
+F 1 "383k" H 16390 15005 50  0000 L CNN
+F 2 "CR1206-FX-3833ELF:RESC3216X75N" V 16250 15050 50  0001 C CNN
+F 3 "~" H 16320 15050 50  0001 C CNN
+	1    16320 15050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R62
+U 1 1 68DA3614
+P 16320 15450
+F 0 "R62" H 16390 15496 50  0000 L CNN
+F 1 "121k" H 16390 15405 50  0000 L CNN
+F 2 "CR0805-FX-1213ELF:RESC2012X60N" V 16250 15450 50  0001 C CNN
+F 3 "~" H 16320 15450 50  0001 C CNN
+	1    16320 15450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C53
+U 1 1 68EF0857
+P 15960 15720
+F 0 "C53" H 16075 15766 50  0000 L CNN
+F 1 "68p" H 16075 15675 50  0000 L CNN
+F 2 "06035C680KAT2A:CAPC1608X90N" H 15998 15570 50  0001 C CNN
+F 3 "https://connect.kemet.com:7667/gateway/IntelliData-ComponentDocumentation/1.0/download/specsheet/C1206C100K5RACTU" H 15960 15720 50  0001 C CNN
+	1    15960 15720
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C52
+U 1 1 6903AE53
+P 15590 15940
+F 0 "C52" H 15705 15986 50  0000 L CNN
+F 1 "1n" H 15705 15895 50  0000 L CNN
+F 2 "C0402C102J4GACAUTO:CAPC1005X55N" H 15628 15790 50  0001 C CNN
+F 3 "https://connect.kemet.com:7667/gateway/IntelliData-ComponentDocumentation/1.0/download/specsheet/C1206C100K5RACTU" H 15590 15940 50  0001 C CNN
+	1    15590 15940
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C54
+U 1 1 69185523
+P 16860 15170
+F 0 "C54" H 16975 15216 50  0000 L CNN
+F 1 "47µ" H 16975 15125 50  0000 L CNN
+F 2 "C5750X7R1C476M230KB:CAPC5750X250N" H 16898 15020 50  0001 C CNN
+F 3 "https://connect.kemet.com:7667/gateway/IntelliData-ComponentDocumentation/1.0/download/specsheet/C1206C100K5RACTU" H 16860 15170 50  0001 C CNN
+	1    16860 15170
+	1    0    0    -1  
+$EndComp
 Wire Notes Line
-	14310 14080 14310 13990
+	15400 15420 15400 16060
 Wire Notes Line
-	14310 13990 14210 13990
-Text Notes 14190 13100 0    50   ~ 0
-Verhoog de stroom er van.\n
+	15400 16060 16260 16060
+Wire Notes Line
+	16630 15310 16630 15610
+Wire Notes Line
+	16630 15610 16260 15610
+Wire Notes Line
+	16260 15430 16260 16060
+Wire Notes Line
+	15400 15430 16260 15430
+Wire Notes Line
+	16240 14920 17170 14920
+Wire Notes Line
+	17170 14920 17170 15310
+Wire Notes Line
+	16240 14920 16240 15430
+Wire Notes Line
+	16240 15310 17170 15310
+Connection ~ 15590 16090
+Wire Wire Line
+	15590 16090 15960 16090
 $EndSCHEMATC
