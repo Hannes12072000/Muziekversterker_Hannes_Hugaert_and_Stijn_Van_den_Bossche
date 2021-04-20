@@ -6352,7 +6352,7 @@ Wire Wire Line
 Wire Wire Line
 	19270 13930 19270 13990
 Text GLabel 17960 13030 0    50   Input ~ 0
-5V
++12V
 Wire Wire Line
 	18570 13030 18450 13030
 NoConn ~ 19970 13030
@@ -6908,7 +6908,7 @@ Text GLabel 16180 8580 1    50   Input ~ 0
 CS_POT3
 Text GLabel 16280 8580 1    50   Input ~ 0
 CS_POT4
-Text GLabel 16380 8580 1    50   Input ~ 0
+Text GLabel 16680 9580 2    50   Input ~ 0
 CS_POT5
 Text GLabel 17970 20540 0    50   Input ~ 0
 SPI1_MOSI
@@ -7273,7 +7273,7 @@ NoConn ~ 7130 11100
 NoConn ~ 7130 10800
 NoConn ~ 7130 10900
 NoConn ~ 7130 11000
-Text Notes 17820 17240 0    50   ~ 0
+Text Notes 17880 16710 0    50   ~ 0
 Component alleen nog bestellen
 $Comp
 L 173950336:173950336 PS1
@@ -7328,14 +7328,10 @@ F 9 "UJ2-MIBH-G-SMT-TR" H 12130 12380 50  0001 L CNN "Manufacturer_Part_Number"
 	1    11380 12980
 	1    0    0    -1  
 $EndComp
-Text GLabel 16680 9680 2    50   Input ~ 0
-Data-
-Text GLabel 16680 9580 2    50   Input ~ 0
-Data+
-Text GLabel 12280 13380 2    50   Input ~ 0
-Data-
-Text GLabel 12280 13080 2    50   Input ~ 0
-Data+
+Text GLabel 19650 9370 0    50   Input ~ 0
+SWCLK
+Text GLabel 19650 9170 0    50   Input ~ 0
+3.3V
 $Comp
 L Switch:SW_DPST_x2 SW2
 U 1 1 63DDF925
@@ -7526,11 +7522,8 @@ F 3 "~" H 6530 12050 50  0001 C CNN
 	1    6530 12050
 	-1   0    0    -1  
 $EndComp
-Text GLabel 16680 9780 2    50   Input ~ 0
-ID
-Text GLabel 12280 13180 2    50   Input ~ 0
-ID
-NoConn ~ 16680 9480
+Text GLabel 19650 9270 0    50   Input ~ 0
+SWDIO
 $Comp
 L Device:C C51
 U 1 1 65E3C431
@@ -7722,4 +7715,25 @@ Wire Notes Line
 Connection ~ 15590 16090
 Wire Wire Line
 	15590 16090 15960 16090
+Text GLabel 19650 9470 0    50   Input ~ 0
+NRST
+$Comp
+L Connector:Screw_Terminal_01x05 J?
+U 1 1 614D0ABC
+P 19850 9370
+F 0 "J?" H 19930 9412 50  0000 L CNN
+F 1 "Screw_Terminal_01x05" H 19930 9321 50  0000 L CNN
+F 2 "" H 19850 9370 50  0001 C CNN
+F 3 "~" H 19850 9370 50  0001 C CNN
+	1    19850 9370
+	1    0    0    -1  
+$EndComp
+Text GLabel 19650 9570 0    50   Input ~ 0
+GND
+Text GLabel 16380 8580 1    50   Input ~ 0
+SWCLK
+Text GLabel 16680 9480 2    50   Input ~ 0
+SWDIO
+NoConn ~ 16680 9680
+NoConn ~ 16680 9780
 $EndSCHEMATC

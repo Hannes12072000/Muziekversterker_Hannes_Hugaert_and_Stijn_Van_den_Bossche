@@ -6352,7 +6352,7 @@ Wire Wire Line
 Wire Wire Line
 	19270 13930 19270 13990
 Text GLabel 17960 13030 0    50   Input ~ 0
-5V
++12V
 Wire Wire Line
 	18570 13030 18450 13030
 NoConn ~ 19970 13030
@@ -7273,7 +7273,7 @@ NoConn ~ 7130 11100
 NoConn ~ 7130 10800
 NoConn ~ 7130 10900
 NoConn ~ 7130 11000
-Text Notes 17820 17240 0    50   ~ 0
+Text Notes 17880 16710 0    50   ~ 0
 Component alleen nog bestellen
 $Comp
 L 173950336:173950336 PS1
@@ -7543,7 +7543,7 @@ F 3 "~" H 12920 15200 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	14580 16090 15960 16090
+	14580 16090 15590 16090
 Wire Wire Line
 	13780 15150 13880 15150
 Wire Wire Line
@@ -7719,4 +7719,7 @@ Wire Notes Line
 	16240 14920 16240 15430
 Wire Notes Line
 	16240 15310 17170 15310
+Connection ~ 15590 16090
+Wire Wire Line
+	15590 16090 15960 16090
 $EndSCHEMATC
