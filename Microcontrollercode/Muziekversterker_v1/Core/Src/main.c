@@ -45,8 +45,6 @@ I2C_HandleTypeDef hi2c1;
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
 
-USART_HandleTypeDef husart1;
-
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -57,8 +55,11 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
-static void MX_USART1_Init(void);
 /* USER CODE BEGIN PFP */
+
+void writeToLeds(uint16_t);
+void writeToPotentiometers(uint16_t, int);
+
 
 /* USER CODE END PFP */
 
@@ -98,7 +99,6 @@ int main(void)
   MX_I2C1_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
-  MX_USART1_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -268,55 +268,74 @@ static void MX_SPI2_Init(void)
 }
 
 /**
-  * @brief USART1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USART1_Init(void)
-{
-
-  /* USER CODE BEGIN USART1_Init 0 */
-
-  /* USER CODE END USART1_Init 0 */
-
-  /* USER CODE BEGIN USART1_Init 1 */
-
-  /* USER CODE END USART1_Init 1 */
-  husart1.Instance = USART1;
-  husart1.Init.BaudRate = 115200;
-  husart1.Init.WordLength = USART_WORDLENGTH_8B;
-  husart1.Init.StopBits = USART_STOPBITS_1;
-  husart1.Init.Parity = USART_PARITY_NONE;
-  husart1.Init.Mode = USART_MODE_TX_RX;
-  husart1.Init.CLKPolarity = USART_POLARITY_LOW;
-  husart1.Init.CLKPhase = USART_PHASE_1EDGE;
-  husart1.Init.CLKLastBit = USART_LASTBIT_DISABLE;
-  if (HAL_USART_Init(&husart1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART1_Init 2 */
-
-  /* USER CODE END USART1_Init 2 */
-
-}
-
-/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, SD_Step_Up_Pin|CS_LEDS_Pin|GPIO_PIN_12|CS_POT3_Pin
+                          |CS_POT2_Pin|CS_POT1_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, CS_POT5_Pin|CS_POT4_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PB0 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : SD_Step_Up_Pin CS_LEDS_Pin PB12 CS_POT3_Pin
+                           CS_POT2_Pin CS_POT1_Pin */
+  GPIO_InitStruct.Pin = SD_Step_Up_Pin|CS_LEDS_Pin|GPIO_PIN_12|CS_POT3_Pin
+                          |CS_POT2_Pin|CS_POT1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : CS_POT5_Pin CS_POT4_Pin */
+  GPIO_InitStruct.Pin = CS_POT5_Pin|CS_POT4_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
 }
 
 /* USER CODE BEGIN 4 */
+
+
+void writeToLeds(uint16_t data){
+	/**
+	 * uses SPI2 of µc
+	 * 2 ic are daisychained after each other
+	*/
+
+
+
+}
+
+void writeToPotentiometers(uint16_t data, int pot_ic){
+	/**
+	 * uses SPI1 of µc
+	 * 5 different pot_ics, each containing 4 potentiometers.
+	 * each pot_ic is addressed with corresponding CS_POTx
+	 */
+
+
+
+}
+
 
 /* USER CODE END 4 */
 
