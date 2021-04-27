@@ -32,6 +32,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+#define TOUCHADRESS 0x25
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -57,8 +59,10 @@ static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
 /* USER CODE BEGIN PFP */
 
-void writeToLeds(uint16_t);
-void writeToPotentiometers(uint16_t, int);
+void writeToLeds(uint8_t[]);
+void writeToPotentiometers(uint8_t[], int);
+void initializePeripherals();
+void readTouches(uint8_t[]);
 
 
 /* USER CODE END PFP */
@@ -313,25 +317,78 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-
-void writeToLeds(uint16_t data){
-	/**
-	 * uses SPI2 of µc
-	 * 2 ic are daisychained after each other
-	*/
-
-
+void readTouches(uint8_t databuf[]){
+	/** reads via i2c, can only read when controller throws interrupt
+	 *     ------nog aan te passen!!!
+	 */
+	HAL_I2C_Master_Receive(hi2c1,TOUCHADRESS,databuf,8,1000);
 
 }
 
-void writeToPotentiometers(uint16_t data, int pot_ic){
+
+
+void initializePeripherals(){
+	HAL_GPIO_WritePin(CS_LEDS_GPIO_Port,CS_LEDS_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(CS_POT1_GPIO_Port,CS_POT1_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(CS_POT2_GPIO_Port,CS_POT2_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(CS_POT3_GPIO_Port,CS_POT3_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(CS_POT4_GPIO_Port,CS_POT4_Pin,GPIO_PIN_SET);
+	HAL_GPIO_WritePin(CS_POT5_GPIO_Port,CS_POT5_Pin,GPIO_PIN_SET);
+
+}
+
+
+void writeToLeds(uint8_t data[]){
+	/**
+	 * uses SPI2 of µc
+	 * 2 ic are daisychained after each other
+	 * CS is active low, so put it high by default
+	*/
+
+	HAL_GPIO_WritePin(CS_LEDS_GPIO_Port, CS_LEDS_Pin, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(hspi2,data,2,1000);
+	HAL_GPIO_WritePin(CS_LEDS_GPIO_Port, CS_LEDS_Pin, GPIO_PIN_SET);
+
+}
+
+void writeToPotentiometers(uint8_t data[], int pot_ic){
 	/**
 	 * uses SPI1 of µc
 	 * 5 different pot_ics, each containing 4 potentiometers.
 	 * each pot_ic is addressed with corresponding CS_POTx
 	 */
 
+	switch(pot_ic)
+	{
+		case 1:
+			HAL_GPIO_WritePin(CS_POT1_GPIO_Port,CS_POT1_Pin, GPIO_PIN_RESET);
+			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_GPIO_WritePin(CS_POT1_GPIO_Port,CS_POT1_Pin, GPIO_PIN_SET);
+			break;
+		case 2:
+			HAL_GPIO_WritePin(CS_POT2_GPIO_Port,CS_POT2_Pin, GPIO_PIN_RESET);
+			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_GPIO_WritePin(CS_POT2_GPIO_Port,CS_POT2_Pin, GPIO_PIN_SET);
+			break;
+		case 3:
+			HAL_GPIO_WritePin(CS_POT3_GPIO_Port,CS_POT3_Pin, GPIO_PIN_RESET);
+			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_GPIO_WritePin(CS_POT3_GPIO_Port,CS_POT3_Pin, GPIO_PIN_SET);
+			break;
+		case 4:
+			HAL_GPIO_WritePin(CS_POT4_GPIO_Port,CS_POT4_Pin, GPIO_PIN_RESET);
+			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_GPIO_WritePin(CS_POT4_GPIO_Port,CS_POT4_Pin, GPIO_PIN_SET);
+			break;
+		case 5:
+			HAL_GPIO_WritePin(CS_POT5_GPIO_Port,CS_POT5_Pin, GPIO_PIN_RESET);
+			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_GPIO_WritePin(CS_POT5_GPIO_Port,CS_POT5_Pin, GPIO_PIN_SET);
+			break;
+		default:
+			printf("Error\r\n");
+
+	}
 
 
 }
