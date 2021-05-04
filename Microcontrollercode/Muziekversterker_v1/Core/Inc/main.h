@@ -58,6 +58,20 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define SD_Step_Up_Pin GPIO_PIN_1
+#define SD_Step_Up_GPIO_Port GPIOB
+#define CS_LEDS_Pin GPIO_PIN_2
+#define CS_LEDS_GPIO_Port GPIOB
+#define CS_POT5_Pin GPIO_PIN_12
+#define CS_POT5_GPIO_Port GPIOA
+#define CS_POT4_Pin GPIO_PIN_15
+#define CS_POT4_GPIO_Port GPIOA
+#define CS_POT3_Pin GPIO_PIN_3
+#define CS_POT3_GPIO_Port GPIOB
+#define CS_POT2_Pin GPIO_PIN_4
+#define CS_POT2_GPIO_Port GPIOB
+#define CS_POT1_Pin GPIO_PIN_5
+#define CS_POT1_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
