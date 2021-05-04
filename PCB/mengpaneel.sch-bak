@@ -4033,9 +4033,7 @@ Wire Wire Line
 Wire Wire Line
 	20820 4870 20960 4870
 Wire Wire Line
-	20520 4670 21460 4670
-Wire Wire Line
-	21460 4270 21460 4670
+	21470 4270 21470 4670
 $Comp
 L Device:CP C19
 U 1 1 5FAC7C1A
@@ -4236,8 +4234,6 @@ F 3 "~" H 20670 4870 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	20060 3570 20270 3570
-Wire Wire Line
-	21210 4270 21460 4270
 Wire Wire Line
 	20720 4270 20720 3570
 Wire Wire Line
@@ -5216,29 +5212,29 @@ $EndComp
 $Comp
 L mengpaneel-rescue:SJ-63053A-SJ-63053A J6
 U 1 1 6D90AE19
-P 16880 3670
-F 0 "J6" H 17280 3935 50  0000 C CNN
-F 1 "SJ-63053A" H 17280 3844 50  0000 C CNN
-F 2 "SJ-63053A:SJ63053A" H 17530 3770 50  0001 L CNN
-F 3 "https://www.mouser.mx/datasheet/2/670/sj_63053a-1890674.pdf" H 17530 3670 50  0001 L CNN
-F 4 "Phone Connectors audio jack, 6.35 mm, horizontal, 3 conductor, through hole, 0 switches, w/ nut" H 17530 3570 50  0001 L CNN "Description"
-F 5 "12.8" H 17530 3470 50  0001 L CNN "Height"
-F 6 "490-SJ-63053A" H 17530 3370 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/SJ-63053A?qs=hWgE7mdIu5Q5ZZx8mXk5JQ%3D%3D" H 17530 3270 50  0001 L CNN "Mouser Price/Stock"
-F 8 "CUI Inc." H 17530 3170 50  0001 L CNN "Manufacturer_Name"
-F 9 "SJ-63053A" H 17530 3070 50  0001 L CNN "Manufacturer_Part_Number"
-	1    16880 3670
+P 18780 3570
+F 0 "J6" H 19180 3835 50  0000 C CNN
+F 1 "SJ-63053A" H 19180 3744 50  0000 C CNN
+F 2 "SJ-63053A:SJ63053A" H 19430 3670 50  0001 L CNN
+F 3 "https://www.mouser.mx/datasheet/2/670/sj_63053a-1890674.pdf" H 19430 3570 50  0001 L CNN
+F 4 "Phone Connectors audio jack, 6.35 mm, horizontal, 3 conductor, through hole, 0 switches, w/ nut" H 19430 3470 50  0001 L CNN "Description"
+F 5 "12.8" H 19430 3370 50  0001 L CNN "Height"
+F 6 "490-SJ-63053A" H 19430 3270 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/SJ-63053A?qs=hWgE7mdIu5Q5ZZx8mXk5JQ%3D%3D" H 19430 3170 50  0001 L CNN "Mouser Price/Stock"
+F 8 "CUI Inc." H 19430 3070 50  0001 L CNN "Manufacturer_Name"
+F 9 "SJ-63053A" H 19430 2970 50  0001 L CNN "Manufacturer_Part_Number"
+	1    18780 3570
 	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0194
 U 1 1 6D90AE1F
-P 16880 3670
-F 0 "#PWR0194" H 16880 3420 50  0001 C CNN
-F 1 "GND" H 16885 3497 50  0000 C CNN
-F 2 "" H 16880 3670 50  0001 C CNN
-F 3 "" H 16880 3670 50  0001 C CNN
-	1    16880 3670
+P 18780 3570
+F 0 "#PWR0194" H 18780 3320 50  0001 C CNN
+F 1 "GND" H 18785 3397 50  0000 C CNN
+F 2 "" H 18780 3570 50  0001 C CNN
+F 3 "" H 18780 3570 50  0001 C CNN
+	1    18780 3570
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -6439,8 +6435,6 @@ Text GLabel 19660 10090 0    50   Input ~ 0
 cs_leds
 Text GLabel 19660 9890 0    50   Input ~ 0
 GPIO_INT
-Text GLabel 19660 9990 0    50   Input ~ 0
-SD_Step-Up
 Text GLabel 19660 10290 0    50   Input ~ 0
 CS_POT2
 Text GLabel 19660 10390 0    50   Input ~ 0
@@ -6467,8 +6461,6 @@ Text GLabel 15880 11080 3    50   Input ~ 0
 cs_leds
 Text GLabel 15680 11080 3    50   Input ~ 0
 GPIO_INT
-Text GLabel 15780 11080 3    50   Input ~ 0
-SD_Step-Up
 Text GLabel 16080 8580 1    50   Input ~ 0
 CS_POT2
 Text GLabel 16180 8580 1    50   Input ~ 0
@@ -6631,15 +6623,6 @@ $EndComp
 Connection ~ 26140 13450
 Connection ~ 26140 18220
 Connection ~ 20720 3570
-Wire Wire Line
-	20840 3470 20840 3130
-Wire Wire Line
-	20840 3130 22040 3130
-Wire Wire Line
-	22040 3130 22040 4270
-Wire Wire Line
-	22040 4270 21460 4270
-Connection ~ 21460 4270
 Wire Notes Line
 	10260 12640 10260 18730
 Text Notes 10640 13420 2    50   ~ 0
@@ -7155,45 +7138,8 @@ Text GLabel 22660 12660 1    50   Input ~ 0
 5V
 Text GLabel 22520 3600 1    50   Input ~ 0
 5V
-Text GLabel 20840 3670 3    50   Input ~ 0
-5V
-Wire Wire Line
-	21840 3570 21900 3570
-$Comp
-L LMV321AUIDBVR:LMV321AUIDBVR IC13
-U 1 1 64D50D66
-P 20840 3470
-F 0 "IC13" H 21340 3735 50  0000 C CNN
-F 1 "LMV321AUIDBVR" H 21340 3644 50  0000 C CNN
-F 2 "LMV321AUIDBVR:SOT95P280X145-5N" H 21690 3570 50  0001 L CNN
-F 3 "https://www.ti.com/lit/gpn/LMV321A" H 21690 3470 50  0001 L CNN
-F 4 "Operational Amplifiers - Op Amps Single Low-Voltage, Cost-Optimized Rail-to-Rail Output Operational Amplifier 5-SOT-23 -40 to 125" H 21690 3370 50  0001 L CNN "Description"
-F 5 "1.45" H 21690 3270 50  0001 L CNN "Height"
-F 6 "595-LMV321AUIDBVR" H 21690 3170 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LMV321AUIDBVR/?qs=GBLSl2AkirulEcoP6K7rtg%3D%3D" H 21690 3070 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Texas Instruments" H 21690 2970 50  0001 L CNN "Manufacturer_Name"
-F 9 "LMV321AUIDBVR" H 21690 2870 50  0001 L CNN "Manufacturer_Part_Number"
-	1    20840 3470
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	20720 3570 20840 3570
-Wire Wire Line
-	21840 3470 21900 3470
-Wire Wire Line
-	21900 3470 21900 3570
-$Comp
-L power:GND #PWR0104
-U 1 1 5FAA7B85
-P 21900 3570
-F 0 "#PWR0104" H 21900 3320 50  0001 C CNN
-F 1 "GND" H 21905 3397 50  0000 C CNN
-F 2 "" H 21900 3570 50  0001 C CNN
-F 3 "" H 21900 3570 50  0001 C CNN
-	1    21900 3570
-	-1   0    0    -1  
-$EndComp
-Connection ~ 21900 3570
 Text GLabel 15550 12900 1    50   Input ~ 0
 5V
 $Comp
@@ -7539,79 +7485,26 @@ Wire Wire Line
 	17720 7680 17720 6070
 Wire Wire Line
 	17720 6070 17390 6070
-Wire Wire Line
-	19420 4090 19420 3570
-Wire Wire Line
-	19420 3570 19370 3570
-Text GLabel 18770 3470 0    50   Input ~ 0
+Text GLabel 20840 3370 0    50   Input ~ 0
 Vmp
 Wire Wire Line
-	18160 3670 18350 3670
+	19580 3570 19670 3570
 Wire Wire Line
-	19200 4090 19420 4090
+	19580 3470 19670 3470
 Wire Wire Line
-	18710 3670 18770 3670
-Connection ~ 18710 3670
+	19670 3470 19670 3570
+Connection ~ 19670 3570
 Wire Wire Line
-	18650 3670 18710 3670
-Wire Wire Line
-	18710 4090 18900 4090
-Wire Wire Line
-	18710 3670 18710 4090
-$Comp
-L Device:R R74
-U 1 1 6D09B198
-P 19050 4090
-F 0 "R74" V 19257 4090 50  0000 C CNN
-F 1 "10k" V 19166 4090 50  0000 C CNN
-F 2 "CMP2010-FX-1002ELF:RESC5025X70N" V 18980 4090 50  0001 C CNN
-F 3 "~" H 19050 4090 50  0001 C CNN
-	1    19050 4090
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R66
-U 1 1 6D09B19E
-P 18500 3670
-F 0 "R66" V 18707 3670 50  0000 C CNN
-F 1 "10k" V 18616 3670 50  0000 C CNN
-F 2 "CMP2010-FX-1002ELF:RESC5025X70N" V 18430 3670 50  0001 C CNN
-F 3 "~" H 18500 3670 50  0001 C CNN
-	1    18500 3670
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C55
-U 1 1 6D09B1A4
-P 18010 3670
-F 0 "C55" V 18262 3670 50  0000 C CNN
-F 1 "1µ" V 18171 3670 50  0000 C CNN
-F 2 "C0805X105K8RAC7210:CAPC2012X100N" H 18048 3520 50  0001 C CNN
-F 3 "~" H 18010 3670 50  0001 C CNN
-	1    18010 3670
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	19420 3570 19760 3570
-Connection ~ 19420 3570
-Wire Wire Line
-	17680 3670 17770 3670
-Wire Wire Line
-	17680 3570 17770 3570
-Wire Wire Line
-	17770 3570 17770 3670
-Connection ~ 17770 3670
-Wire Wire Line
-	17770 3670 17860 3670
+	19670 3570 19760 3570
 $Comp
 L Amplifier_Operational:LM324A U1
 U 4 1 6D81755F
-P 19070 3570
-F 0 "U1" H 19070 3937 50  0000 C CNN
-F 1 "LM324A" H 19070 3846 50  0000 C CNN
-F 2 "LM324N:DIP794W56P254L1905H533Q14N" H 19020 3670 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 19120 3770 50  0001 C CNN
-	4    19070 3570
+P 21140 3470
+F 0 "U1" H 21140 3837 50  0000 C CNN
+F 1 "LM324A" H 21140 3746 50  0000 C CNN
+F 2 "LM324N:DIP794W56P254L1905H533Q14N" H 21090 3570 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 21190 3670 50  0001 C CNN
+	4    21140 3470
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -7639,4 +7532,15 @@ $EndComp
 Text GLabel 20260 6320 1    50   Input ~ 0
 5V
 NoConn ~ 12280 13380
+NoConn ~ 15780 11080
+Wire Wire Line
+	21440 3470 21470 3470
+Wire Wire Line
+	21470 3470 21470 4270
+Wire Wire Line
+	21210 4270 21470 4270
+Connection ~ 21470 4270
+Wire Wire Line
+	20520 4670 21470 4670
+NoConn ~ 19660 9990
 $EndSCHEMATC

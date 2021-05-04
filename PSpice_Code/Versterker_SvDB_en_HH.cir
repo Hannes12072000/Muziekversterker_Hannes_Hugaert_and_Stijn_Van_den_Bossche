@@ -37,7 +37,7 @@ R29     50      54      100
 R30     22      24      100k
 .PARAM SET=.5
 .STEP PARAM(SET) 0, 1,.2
-X1  0  5  4   POT PARAMS: R=750 SET={SET}
+X1  0  5  4   POT PARAMS: R=10k SET={SET}
 X2  0  11 10  POT PARAMS: R=750 SET={SET}
 X3  0  14 15  POT PARAMS: R=750 SET={SET}
 X4  37 31 25  POT PARAMS: R=750 SET={SET}
@@ -135,7 +135,7 @@ X17  	0  		44 		57  	58  	46   	TL072
     *R1 3 2 {R*(w)}
     *.ENDS
 
-.SUBCKT POT 1 T 2 PARAMS: VALUE=1K SET=0.5
+.SUBCKT POT 1 T 2 PARAMS: VALUE=10K SET=0.5
 RT 1 T {VALUE*(1-SET)+.001}
 RB T 2 {VALUE*SET+.001}
 .ENDS
@@ -143,6 +143,6 @@ RB T 2 {VALUE*SET+.001}
 *.model RMOD	RES(R=750)
 *.STEP RES RMOD(R)	0, 750, 1500
 
-.AC     dec     500     1       50k
+*.AC     dec     500     1       50k
 .probe
 .end
