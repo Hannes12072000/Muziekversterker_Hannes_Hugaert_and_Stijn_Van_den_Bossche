@@ -33,7 +33,8 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-#define TOUCHADRESS 0x25
+#define TOUCHADRESS_READ 0x4B
+#define TOUCHADRESS_WRITE 0x4A
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -62,7 +63,9 @@ static void MX_SPI2_Init(void);
 void writeToLeds(uint8_t[]);
 void writeToPotentiometers(uint8_t[], int);
 void initializePeripherals();
-void readTouches(uint8_t[]);
+void readTouches(uint8_t[],uint8_t);
+void getCoordinatesLastTouch(uint16_t[]);
+void writeToTouchController(uint16_t,uint16_t, uint8_t[],uint16_t);
 
 
 /* USER CODE END PFP */
@@ -317,13 +320,42 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void readTouches(uint8_t databuf[]){
+
+void getCoordinatesLastTouch(uint16_t touchCo[]){
+	uint8_t databuf[20];
+	readTouches(databuf,6); //6 expected
+
+	/**byte 0 = amount total bytes, not interesting
+	 * byte 1 = TOUCHID, not really relevant
+	 * byte 2 = part of touch X coo
+	 * byte 3 = other part of touch X coo
+	 * byte 4 = part of touch Y coo
+	 * byte 5 = other part of touch Y coo
+	 */
+
+	//writing X out
+	uint16_t[0] = ((uint16_t)databuf[3])<<7 + ((uint16_t)databuf[2]);
+
+	//writing Y out
+	uint16_t[1] = ((uint16_t)databuf[5])<<7 + ((uint16_t)databuf[4]);
+}
+
+
+
+uint8_t readTouches(uint8_t databuf[],uint8_t amount_bytes_expected){
 	/** reads via i2c, can only read when controller throws interrupt
 	 *     ------nog aan te passen!!!
 	 */
-	HAL_I2C_Master_Receive(hi2c1,TOUCHADRESS,databuf,8,1000);
+	HAL_I2C_Master_Receive(&hi2c1,TOUCHADRESS_READ,databuf,amount_bytes_expected,50);
+	uint8_t bytesToReceive = databuf[0];
 
+	return bytesToReceive;
 }
+
+void writeToTouchController(uint16_t memAddress,uint16_t memAddressSize, uint8_t data[],uint16_t amountData){
+	HAL_I2C_Mem_Write(&hi2c1,TOUCHADRESS_WRITE,memAddress,memAddressSize,data,amountData,50);
+}
+
 
 
 
@@ -346,10 +378,12 @@ void writeToLeds(uint8_t data[]){
 	*/
 
 	HAL_GPIO_WritePin(CS_LEDS_GPIO_Port, CS_LEDS_Pin, GPIO_PIN_RESET);
-	HAL_SPI_Transmit(hspi2,data,2,1000);
+	HAL_SPI_Transmit(&hspi2,data,2,1000);
 	HAL_GPIO_WritePin(CS_LEDS_GPIO_Port, CS_LEDS_Pin, GPIO_PIN_SET);
 
 }
+
+
 
 void writeToPotentiometers(uint8_t data[], int pot_ic){
 	/**
@@ -362,27 +396,27 @@ void writeToPotentiometers(uint8_t data[], int pot_ic){
 	{
 		case 1:
 			HAL_GPIO_WritePin(CS_POT1_GPIO_Port,CS_POT1_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_SPI_Transmit(&hspi1,data,1,1000);
 			HAL_GPIO_WritePin(CS_POT1_GPIO_Port,CS_POT1_Pin, GPIO_PIN_SET);
 			break;
 		case 2:
 			HAL_GPIO_WritePin(CS_POT2_GPIO_Port,CS_POT2_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_SPI_Transmit(&hspi1,data,1,1000);
 			HAL_GPIO_WritePin(CS_POT2_GPIO_Port,CS_POT2_Pin, GPIO_PIN_SET);
 			break;
 		case 3:
 			HAL_GPIO_WritePin(CS_POT3_GPIO_Port,CS_POT3_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_SPI_Transmit(&hspi1,data,1,1000);
 			HAL_GPIO_WritePin(CS_POT3_GPIO_Port,CS_POT3_Pin, GPIO_PIN_SET);
 			break;
 		case 4:
 			HAL_GPIO_WritePin(CS_POT4_GPIO_Port,CS_POT4_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_SPI_Transmit(&hspi1,data,1,1000);
 			HAL_GPIO_WritePin(CS_POT4_GPIO_Port,CS_POT4_Pin, GPIO_PIN_SET);
 			break;
 		case 5:
 			HAL_GPIO_WritePin(CS_POT5_GPIO_Port,CS_POT5_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(hspi1,data,1,1000);
+			HAL_SPI_Transmit(&hspi1,data,1,1000);
 			HAL_GPIO_WritePin(CS_POT5_GPIO_Port,CS_POT5_Pin, GPIO_PIN_SET);
 			break;
 		default:
