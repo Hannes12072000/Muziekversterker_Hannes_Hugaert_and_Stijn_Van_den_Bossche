@@ -60,18 +60,24 @@ static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
 /* USER CODE BEGIN PFP */
 
-void writeToLeds(uint8_t[]);
+void writeToLedsRegister(uint8_t[]);
 void writeToPotentiometers(uint8_t[], int);
-void initializePeripherals();
+void initializePeripherals(void);
 void readTouches(uint8_t[],uint8_t);
 void getCoordinatesLastTouch(uint16_t[]);
 void writeToTouchController(uint16_t,uint16_t, uint8_t[],uint16_t);
+void initializeLedDriver(void);
+void setLedValues(uint8_t[]);
 
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+//Values of leds kept, every value is value from 0-12 for each sliders led array
+uint8_t ledValues[11];
+
 
 /* USER CODE END 0 */
 
@@ -325,12 +331,12 @@ void getCoordinatesLastTouch(uint16_t touchCo[]){
 	uint8_t databuf[20];
 	readTouches(databuf,6); //6 expected
 
-	/**byte 0 = amount total bytes, not interesting
+	/**byte 0 = amount total bytes
 	 * byte 1 = TOUCHID, not really relevant
-	 * byte 2 = part of touch X coo
-	 * byte 3 = other part of touch X coo
-	 * byte 4 = part of touch Y coo
-	 * byte 5 = other part of touch Y coo
+	 * byte 2 = part of touch X coordinate
+	 * byte 3 = other part of touch X coordinate
+	 * byte 4 = part of touch Y coordinate
+	 * byte 5 = other part of touch Y coordinate
 	 */
 
 	//writing X out
@@ -370,19 +376,57 @@ void initializePeripherals(){
 }
 
 
-void writeToLeds(uint8_t data[]){
+void writeToLedsRegister(uint8_t data[]){
 	/**
 	 * uses SPI2 of µc
 	 * 2 ic are daisychained after each other
 	 * CS is active low, so put it high by default
+	 *
+	 * Both chips are controlled by daisychaining data; each chip needs 16 bit data,
+	 * so two 16 bit values are sent after each other, then CS is pulled high
 	*/
 
+
 	HAL_GPIO_WritePin(CS_LEDS_GPIO_Port, CS_LEDS_Pin, GPIO_PIN_RESET);
-	HAL_SPI_Transmit(&hspi2,data,2,1000);
+	HAL_SPI_Transmit(&hspi2,data,4,100);
 	HAL_GPIO_WritePin(CS_LEDS_GPIO_Port, CS_LEDS_Pin, GPIO_PIN_SET);
 
 }
 
+void setLedValues(uint8_t data[]){
+	//Decoding led values to instructions for led drivers
+
+
+
+
+
+}
+
+
+void initializeLedDriver(){
+	//LED driver (MAX7219)
+	uint8_t data[4];
+
+	//set decode mode for both chips to no decode
+	data[0]=0x09;
+	data[1]=0x00;
+	data[2]=0x09;
+	data[3]=0x00;
+	writeToLedsRegister(data);
+
+	/**scan-limit mode, set to 8 digits for first one, 3 for other one,
+	 * for a total of 11 "digits".
+	 * Each "digit" represents a slider with leds,
+	 * every segment represents a vertical led layer
+	 */
+	data[0]=0x0B;
+	data[1]=0x07;
+	data[0]=0x0B;
+	data[1]=0x02;
+	writeToLedsRegister(data);
+
+
+}
 
 
 void writeToPotentiometers(uint8_t data[], int pot_ic){
