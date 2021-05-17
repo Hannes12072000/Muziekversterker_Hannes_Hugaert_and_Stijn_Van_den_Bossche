@@ -69,6 +69,7 @@ void writeToTouchController(uint8_t[],uint16_t);
 void initializeLedDriver(void);
 void initializeTouchController(void);
 void setLedValues(uint8_t[]);
+void processTouch();
 void HAL_GPIO_EXTI_Callback(uint16_t);
 
 
@@ -81,10 +82,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t);
 
 
 uint8_t ledValues[11];
-/* Order of PotValues ->
- *
- *
- */
 uint8_t potValues[20];
 uint16_t touchCoordinates[2];
 
@@ -136,6 +133,10 @@ int main(void)
   }
 
 
+
+  initializePeripherals();
+  initializeLedDriver();
+  initializeTouchController();
 
 
   /* USER CODE END 2 */
@@ -474,10 +475,7 @@ void setLedValues(uint8_t data[]){
 		data[2]=0x00; //no-op code, second controller doesn't need to display bc of problem noted above
 		data[3]=0x00;
 		writeToLedsRegister(data);
-
 	}
-
-
 }
 
 
@@ -663,6 +661,16 @@ void initializeTouchController(){
 }
 
 
+void processTouch(){
+	/* no arguments needed, bc all values used and written to
+	 * are saved as global variables.
+	 * That being:
+	 *  touchCoo, ledValues & potValues
+	 */
+
+	printf("Touchcoordinates (x,y)\r\n%x\r\n%x\r\n",touchCoordinates[0],touchCoordinates[1]);
+	//depending on these values, needs to be converted into led values & pot values
+}
 
 
 
