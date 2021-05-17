@@ -78,7 +78,14 @@ void HAL_GPIO_EXTI_Callback(uint16_t);
 /* USER CODE BEGIN 0 */
 
 //Values of leds kept, every value is value from 0-12 for each sliders led array
+
+
 uint8_t ledValues[11];
+/* Order of PotValues ->
+ *
+ *
+ */
+uint8_t potValues[20];
 uint16_t touchCoordinates[2];
 
 
@@ -116,6 +123,20 @@ int main(void)
   MX_SPI1_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
+
+  //Initialization of Potvalues to 0
+
+  for(int i=0;i<20;i++){
+	  potValues[i]=0x00;
+  }
+
+  //initialization of LedValues to 0
+  for(int i=0;i<11;i++){
+	  ledValues[i]=0x00;
+  }
+
+
+
 
   /* USER CODE END 2 */
 
@@ -417,8 +438,44 @@ void writeToLedsRegister(uint8_t data[]){
 void setLedValues(uint8_t data[]){
 	//Decoding led values to instructions for led drivers
 
+	/* Noticed a flaw in way led-matrix is set up,
+	 * will very likely not be possible to drive LEDs of sliders 9,10 or 11,
+	 * neither will LED layers 9,10,11 and 12 be drivable.
+	 * There will still be LEDs drivable on Sliders 1-8,
+	 *  and of those Led layers 1-8
+	 *
+	 *
+	 *  Data stored is in order:
+	 *  7:0 (led layers)
+	 *  D7,D0,D1,D2, D3,D4,D5,D6
+	 */
+
+	/*  looping over different ledsliders
+	 *  LedSlider Mapping : see below
+	 */
 
 
+	uint8_t ledSliderMap[8]= {0x01,0x02,0x03,0x04, 0x05,0x06,0x07,0x08};
+	for(int ledSlider=0;ledSlider<8;ledSlider++){
+
+		//easiest to write these manually
+		uint8_t ledValue=0x00;
+		ledValue = ledValue | ( data[ledSlider] & 0b10000000); 			//writing bit 7
+		ledValue = ledValue | ((data[ledSlider] & 0b00000001)<<6);		//writing bit 6
+		ledValue = ledValue | ((data[ledSlider] & 0b00000010)<<4);		//writing bit 5
+		ledValue = ledValue | ((data[ledSlider] & 0b00000100)<<2);		//writing bit 4
+		ledValue = ledValue | ( data[ledSlider] & 0b00001000);			//writing bit 3
+		ledValue = ledValue | ((data[ledSlider] & 0b00010000)>>2);		//writing bit 2
+		ledValue = ledValue | ((data[ledSlider] & 0b00100000)>>4);		//writing bit 1
+		ledValue = ledValue | ((data[ledSlider] & 0b01000000)>>6);		//writing bit 0
+
+		data[0]=ledSliderMap[ledSlider];
+		data[1]=ledValue;
+		data[2]=0x00; //no-op code, second controller doesn't need to display bc of problem noted above
+		data[3]=0x00;
+		writeToLedsRegister(data);
+
+	}
 
 
 }
@@ -435,6 +492,15 @@ void initializeLedDriver(){
 	data[3]=0x00;
 	writeToLedsRegister(data);
 
+
+	//Intensity setting; register 0x0A
+	//by default both set to max intensity, can be adjusted if some are brighter than others
+	data[0]=0x0A;
+	data[1]=0x0F;
+	data[2]=0x0A;
+	data[3]=0x0F;
+	writeToLedsRegister(data);
+
 	/**scan-limit mode, set to 8 digits for first one, 3 for other one,
 	 * for a total of 11 "digits".
 	 * Each "digit" represents a slider with leds,
@@ -446,6 +512,12 @@ void initializeLedDriver(){
 	data[1]=0x02;
 	writeToLedsRegister(data);
 
+	//enabling shutdown register
+	data[0]=0x0C;
+	data[1]=0x01;		//writing 0x01 to enable
+	data[2]=0x0C;
+	data[3]=0x01;
+	writeToLedsRegister(data);
 
 }
 
@@ -588,16 +660,25 @@ void initializeTouchController(){
 	data[2]=0x00; //enable touch cmd
 	writeToTouchController(data,3);
 
-
-
 }
+
+
+
 
 
 void writeToPotentiometers(uint8_t data[], uint16_t amountBytes,  int pot_ic){
 	/**
+	 * AD5204
 	 * uses SPI1 of µc
 	 * 5 different pot_ics, each containing 4 potentiometers.
 	 * each pot_ic is addressed with corresponding CS_POTx
+	 *
+	 *  When writing data to pots, only 11 bits are needed.
+	 *  3 bits for pot address, 8 bits for value.
+	 *  We'll send 2 bytes, first byte send having 5 0's appended first, as they will get shifted out anyway.
+	 *
+	 *
+	 *  No initialization for pots is needed
 	 */
 
 	switch(pot_ic)
