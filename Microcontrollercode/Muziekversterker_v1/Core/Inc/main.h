@@ -58,6 +58,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define touch_reset_Pin GPIO_PIN_2
+#define touch_reset_GPIO_Port GPIOA
 #define SD_Step_Up_Pin GPIO_PIN_1
 #define SD_Step_Up_GPIO_Port GPIOB
 #define CS_LEDS_Pin GPIO_PIN_2
