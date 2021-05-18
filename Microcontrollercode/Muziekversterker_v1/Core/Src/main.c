@@ -73,8 +73,9 @@ void writeToTouchController(uint8_t[],uint16_t);
 void initializeLedDriver(void);
 void initializeTouchController(void);
 void preInitializeTouchController(void);
-void setLedValues(uint8_t[]);
-void processTouch();
+void setLedValues(void);
+void setPotValues(void);
+void processTouch(void);
 void HAL_GPIO_EXTI_Callback(uint16_t);
 
 
@@ -460,7 +461,7 @@ void writeToLedsRegister(uint8_t data[]){
 
 }
 
-void setLedValues(uint8_t data[]){
+void setLedValues(){
 	//Decoding led values to instructions for led drivers
 
 	/* Noticed a flaw in way led-matrix is set up,
@@ -479,20 +480,20 @@ void setLedValues(uint8_t data[]){
 	 *  LedSlider Mapping : see below
 	 */
 
-
+	uint8_t data[4]; //used to write data out
 	uint8_t ledSliderMap[8]= {0x01,0x02,0x03,0x04, 0x05,0x06,0x07,0x08};
 	for(int ledSlider=0;ledSlider<8;ledSlider++){
 
 		//easiest to write these manually
 		uint8_t ledValue=0x00;
-		ledValue = ledValue | ( data[ledSlider] & 0b10000000); 			//writing bit 7
-		ledValue = ledValue | ((data[ledSlider] & 0b00000001)<<6);		//writing bit 6
-		ledValue = ledValue | ((data[ledSlider] & 0b00000010)<<4);		//writing bit 5
-		ledValue = ledValue | ((data[ledSlider] & 0b00000100)<<2);		//writing bit 4
-		ledValue = ledValue | ( data[ledSlider] & 0b00001000);			//writing bit 3
-		ledValue = ledValue | ((data[ledSlider] & 0b00010000)>>2);		//writing bit 2
-		ledValue = ledValue | ((data[ledSlider] & 0b00100000)>>4);		//writing bit 1
-		ledValue = ledValue | ((data[ledSlider] & 0b01000000)>>6);		//writing bit 0
+		ledValue = ledValue | ( ledValues[ledSlider] & 0b10000000); 		//writing bit 7
+		ledValue = ledValue | ((ledValues[ledSlider] & 0b00000001)<<6);		//writing bit 6
+		ledValue = ledValue | ((ledValues[ledSlider] & 0b00000010)<<4);		//writing bit 5
+		ledValue = ledValue | ((ledValues[ledSlider] & 0b00000100)<<2);		//writing bit 4
+		ledValue = ledValue | ( ledValues[ledSlider] & 0b00001000);			//writing bit 3
+		ledValue = ledValue | ((ledValues[ledSlider] & 0b00010000)>>2);		//writing bit 2
+		ledValue = ledValue | ((ledValues[ledSlider] & 0b00100000)>>4);		//writing bit 1
+		ledValue = ledValue | ((ledValues[ledSlider] & 0b01000000)>>6);		//writing bit 0
 
 		data[0]=ledSliderMap[ledSlider];
 		data[1]=ledValue;
@@ -837,6 +838,27 @@ void processTouch(){
 			break;
 
 	}
+
+
+
+
+	//Call funcions that handle writing to IC's
+	setLedValues();
+
+
+}
+
+void setPotValues(){
+	uint
+
+	for(int pot=1;pot<6;pot++){
+		switch(pot){
+			case 1:
+				writeToPotentiometers(potValues[])
+
+		}
+	}
+
 
 }
 
