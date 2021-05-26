@@ -187,17 +187,9 @@ int main(void)
 
   initializePeripherals();
 
+
   //led test
-
   uint8_t data[4];
-
-  	 /*data[0]=0x0F; //LED display test, all on
-    data[1]=0x00;
-    data[2]=0x0F;
-    data[3]=0x00;
-
-    writeToLedsRegister(data);
-*/
 
 
   initializeLedDriver();
