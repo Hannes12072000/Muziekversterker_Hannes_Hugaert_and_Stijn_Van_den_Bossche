@@ -22,6 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <errno.h>
+#include <sys/unistd.h>
 
 /* USER CODE END Includes */
 
@@ -38,6 +40,7 @@
 #define TOUCHSCALING_X 372
 #define TOUCHSCALING_Y 341
 #define POTVALUE_SCALING 23
+#define DELAYCOUNT 50
 
 
 /* USER CODE END PD */
@@ -53,6 +56,8 @@ I2C_HandleTypeDef hi2c1;
 
 SPI_HandleTypeDef hspi2;
 
+UART_HandleTypeDef huart1;
+
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -62,6 +67,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SPI2_Init(void);
+static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 void enableInterrupt(void);
@@ -82,6 +88,38 @@ void writeToLedsRegister(uint8_t[]);
 void setPotValues(void);
 void writeToPotentiometers(uint8_t[],uint16_t, int);
 
+
+
+void __attribute__((naked)) SysTickDelayCount(unsigned long ulCount)
+{
+    __asm("    subs    r0, #1\n"
+          "    bne     SysTickDelayCount\n"
+          "    bx      lr");
+}
+
+int _write(int file, char *ptr, int len) {
+    HAL_StatusTypeDef xStatus;
+    switch (file) {
+    case STDOUT_FILENO: /*stdout*/
+		xStatus = HAL_UART_Transmit(&huart1, (uint8_t*)ptr, len, HAL_MAX_DELAY);
+		if (xStatus != HAL_OK) {
+			errno = EIO;
+			return -1;
+		}
+        break;
+    case STDERR_FILENO: /* stderr */
+		xStatus = HAL_UART_Transmit(&huart1, (uint8_t*)ptr, len, HAL_MAX_DELAY);
+		if (xStatus != HAL_OK) {
+			errno = EIO;
+			return -1;
+		}
+        break;
+    default:
+        errno = EBADF;
+        return -1;
+    }
+    return len;
+}
 
 
 /* USER CODE END PFP */
@@ -129,40 +167,48 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_SPI2_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
   //Initialization of Potvalues to 0
 
-    for(int i=0;i<20;i++){
-  	  potValues[i]=0x00;
-    }
+  for(int i=0;i<20;i++){
+	  potValues[i]=0xFF;
+  }
 
-    //L-R balance default op mid zetten
-    potValues[17]=128;
+  //L-R balance default op mid zetten
+  potValues[17]=128;
 
-    //initialization of LedValues to 0
-    for(int i=0;i<11;i++){
-  	  ledValues[i]=0x00;
-    }
+  //initialization of LedValues to 0
+  for(int i=0;i<11;i++){
+	  ledValues[i]=0x00;
+  }
+  HAL_Delay(50);
 
+  initializePeripherals();
 
-    initializePeripherals();
+  //led test
 
-    //led test
-    uint8_t data[4];
+  uint8_t data[4];
 
-    data[0]=0x0F; //LED display test, all on
-    data[1]=0x01;
+  	 /*data[0]=0x0F; //LED display test, all on
+    data[1]=0x00;
     data[2]=0x0F;
-    data[3]=0x01;
+    data[3]=0x00;
+
     writeToLedsRegister(data);
+*/
 
 
-    //initializeLedDriver();
-    //enableInterrupt();
+  initializeLedDriver();
 
 
+  enableInterrupt();
 
+
+ HAL_Delay(10);
+
+ setPotValues();
 
   /* USER CODE END 2 */
 
@@ -173,6 +219,28 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+	  /*data[0]=0x0F; //LED display test, all on
+	      data[1]=0x01;
+	      data[2]=0x0F;
+	      data[3]=0x01;
+
+	      writeToLedsRegister(data);
+	  */
+
+
+	  initializeLedDriver();
+
+	  data[0]=0x01; //LED display test, all on
+	  data[1]=0xFF;
+	  data[2]=0x01;
+	  data[3]=0xFF;
+
+	  writeToLedsRegister(data);
+
+	  HAL_Delay(200);
+
+
   }
   /* USER CODE END 3 */
 }
@@ -228,7 +296,8 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_I2C1;
+  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_USART1|RCC_PERIPHCLK_I2C1;
+  PeriphClkInitStruct.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
   PeriphClkInitStruct.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
@@ -301,7 +370,7 @@ static void MX_SPI2_Init(void)
   hspi2.Instance = SPI2;
   hspi2.Init.Mode = SPI_MODE_MASTER;
   hspi2.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi2.Init.DataSize = SPI_DATASIZE_4BIT;
+  hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi2.Init.NSS = SPI_NSS_SOFT;
@@ -323,6 +392,41 @@ static void MX_SPI2_Init(void)
 }
 
 /**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -335,6 +439,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOI_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
 
@@ -397,6 +502,8 @@ void enableInterrupt(){
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	printf("interrupt\r\n");
+
 	if(GPIO_Pin == TOUCH_INT_Pin){
 
 		//first time interrupt is generated is for initialization for touchcontroller
@@ -654,6 +761,9 @@ void processTouch(){
 		sliderheight=0;
 	}
 
+	printf("Slider: %d \r\n",slider);
+	printf("Sliderheight: %d \r\n",sliderheight);
+
 
 
 
@@ -800,7 +910,8 @@ void getCoordinatesLastTouch(uint16_t touchCo[]){
 }
 
 void writeToTouchController(uint8_t data[],uint16_t amountData){
-	HAL_I2C_Master_Transmit(&hi2c1,TOUCHADRESS_WRITE,data,amountData,50);
+	HAL_I2C_Master_Transmit(&hi2c1,TOUCHADRESS_WRITE,data,amountData,1);
+	SysTickDelayCount(DELAYCOUNT);
 	//HAL_I2C_Mem_Write(&hi2c1,TOUCHADRESS_WRITE,memAddress,memAddressSize,data,amountData,50);
 }
 
@@ -864,8 +975,9 @@ void writeToLedsRegister(uint8_t data[]){
 
 
 	HAL_GPIO_WritePin(CS_LEDS_GPIO_Port, CS_LEDS_Pin, GPIO_PIN_RESET);
-	HAL_SPI_Transmit(&hspi2,data,4,100);
+	HAL_SPI_Transmit(&hspi2,data,4,1);
 	HAL_GPIO_WritePin(CS_LEDS_GPIO_Port, CS_LEDS_Pin, GPIO_PIN_SET);
+	SysTickDelayCount(DELAYCOUNT);
 
 }
 
@@ -904,38 +1016,41 @@ void writeToPotentiometers(uint8_t data[], uint16_t amountBytes,  int pot_ic){
 	{
 		case 1:
 			HAL_GPIO_WritePin(CS_POT1_GPIO_Port,CS_POT1_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(&hspi2,data,amountBytes,50);
+			HAL_SPI_Transmit(&hspi2,data,amountBytes,1);
 			HAL_GPIO_WritePin(CS_POT1_GPIO_Port,CS_POT1_Pin, GPIO_PIN_SET);
 			break;
 		case 2:
 			HAL_GPIO_WritePin(CS_POT2_GPIO_Port,CS_POT2_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(&hspi2,data,amountBytes,50);
+			HAL_SPI_Transmit(&hspi2,data,amountBytes,1);
 			HAL_GPIO_WritePin(CS_POT2_GPIO_Port,CS_POT2_Pin, GPIO_PIN_SET);
 			break;
 		case 3:
 			HAL_GPIO_WritePin(CS_POT3_GPIO_Port,CS_POT3_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(&hspi2,data,amountBytes,50);
+			HAL_SPI_Transmit(&hspi2,data,amountBytes,1);
 			HAL_GPIO_WritePin(CS_POT3_GPIO_Port,CS_POT3_Pin, GPIO_PIN_SET);
 			break;
 		case 4:
 			HAL_GPIO_WritePin(CS_POT4_GPIO_Port,CS_POT4_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(&hspi2,data,amountBytes,50);
+			HAL_SPI_Transmit(&hspi2,data,amountBytes,1);
 			HAL_GPIO_WritePin(CS_POT4_GPIO_Port,CS_POT4_Pin, GPIO_PIN_SET);
 			break;
 		case 5:
 			HAL_GPIO_WritePin(CS_POT5_GPIO_Port,CS_POT5_Pin, GPIO_PIN_RESET);
-			HAL_SPI_Transmit(&hspi2,data,amountBytes,50);
+			HAL_SPI_Transmit(&hspi2,data,amountBytes,1);
 			HAL_GPIO_WritePin(CS_POT5_GPIO_Port,CS_POT5_Pin, GPIO_PIN_SET);
 			break;
 		default:
-			//printf("Error\r\n");
+			printf("Error\r\n");
 			break;
 
-
 	}
+	SysTickDelayCount(DELAYCOUNT);
 
 
 }
+
+
+
 
 
 
